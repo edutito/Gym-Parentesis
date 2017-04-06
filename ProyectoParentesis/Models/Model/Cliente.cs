@@ -60,6 +60,16 @@ namespace Models.Model
             }
         }
 
+        public List<Cliente> getClientesPrimerIngreso()
+        {
+            String Sql = "SELECT "+
+                            "C.*" +
+                          " FROM CLIENTE AS C" +
+                          " WHERE 1 = (SELECT  COUNT (P.id) FROM Pago AS P  WHERE P.Cliente_id = C.id )";
+
+            return this.Conexion.getDataTable(Sql, true).DataTableToList<Cliente>(); ;
+        }
+
         public List<Cliente> getData()
         {
             return this.Conexion.getData(this.table).DataTableToList<Cliente>();

@@ -12,8 +12,8 @@ namespace ProyectoParentesis.Validaciones
     public class Validacion
     {
 
-        private Regex SoloLetras = new Regex(@"[A-Za-z\s]"); // no numeros y no caracteres especiales         
-        private Regex SoloNumeros = new Regex (@"[\d]"); // no numeros 
+        private Regex SoloLetras = new Regex(@"^[A-Za-z\s]+$"); // no numeros y no caracteres especiales         
+        private Regex SoloNumeros = new Regex(@"^\d$"); // no numeros 
         private Match match;
 
         public bool ValidarTexto(String valor, String error)
@@ -30,9 +30,9 @@ namespace ProyectoParentesis.Validaciones
 
 
         public bool ValidarSoloLetras(String valor, String error)
-        {
-            match = this.SoloLetras.Match(valor);
-            if (!match.Success)
+        {            
+            bool sw = this.SoloLetras.IsMatch(valor);
+            if (!this.SoloLetras.IsMatch(valor))
             {
                 MessageBox.Show(error);
 
@@ -45,8 +45,8 @@ namespace ProyectoParentesis.Validaciones
 
         public bool ValidarSoloNumero(String valor, String error)
         {
-            match = this.SoloNumeros.Match(valor);
-            if (!match.Success)
+
+            if (!this.SoloNumeros.IsMatch(valor))
             {
                 MessageBox.Show(error);
 
