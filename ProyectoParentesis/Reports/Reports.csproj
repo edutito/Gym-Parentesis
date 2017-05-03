@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>d4218528-1648-4aa9-9a71-c8f9b1ab85c9</ProjectGuid>
+    <ProjectGuid>{A7092FB6-C079-4250-9CBA-7CDA54DECB3C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Reports</RootNamespace>

@@ -30,14 +30,18 @@
         {
             this.DGClientesPrimerIngreso = new System.Windows.Forms.DataGridView();
             this.btnGenerarClientesPrimerIngreso = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGClientesPrimerIngreso)).BeginInit();
             this.SuspendLayout();
             // 
             // DGClientesPrimerIngreso
             // 
+            this.DGClientesPrimerIngreso.AllowUserToAddRows = false;
+            this.DGClientesPrimerIngreso.AllowUserToDeleteRows = false;
             this.DGClientesPrimerIngreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGClientesPrimerIngreso.Location = new System.Drawing.Point(-7, 85);
             this.DGClientesPrimerIngreso.Name = "DGClientesPrimerIngreso";
+            this.DGClientesPrimerIngreso.ReadOnly = true;
             this.DGClientesPrimerIngreso.Size = new System.Drawing.Size(1027, 370);
             this.DGClientesPrimerIngreso.TabIndex = 0;
             // 
@@ -51,11 +55,22 @@
             this.btnGenerarClientesPrimerIngreso.UseVisualStyleBackColor = true;
             this.btnGenerarClientesPrimerIngreso.Click += new System.EventHandler(this.btnGenerarClientesPrimerIngreso_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(286, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmClientesPrimerIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 449);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGenerarClientesPrimerIngreso);
             this.Controls.Add(this.DGClientesPrimerIngreso);
             this.Name = "FrmClientesPrimerIngreso";
@@ -70,5 +85,6 @@
 
         private System.Windows.Forms.DataGridView DGClientesPrimerIngreso;
         private System.Windows.Forms.Button btnGenerarClientesPrimerIngreso;
+        private System.Windows.Forms.Button button1;
     }
 }
