@@ -47,5 +47,11 @@ namespace ProyectoParentesis
             FrmReports.FrmClientesPrimerIngreso frm = new FrmReports.FrmClientesPrimerIngreso()  ;
             frm.Show();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FUsuario.FrmMostrar frm = new FUsuario.FrmMostrar();
+            frm.Show();
+        }
     }
 }

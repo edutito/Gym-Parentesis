@@ -16,9 +16,28 @@ namespace Models.Model
         public String Apellido { get; set; }
         public String Estado { get; set; }
 
+        public Usuario llenar(
+         String Contrasena,
+         String Nombre_Usuario,
+         String Nombre,
+         String Apellido,
+         String Estado)
+        {
+            this.Contrasena = Contrasena;
+            this.Nombre_Usuario = Nombre_Usuario;
+            this.Nombre = Nombre;
+            this.Apellido = Apellido;
+            this.Estado = Estado;
+            
+
+            return this;
+
+        }
+
+
     }
 
-   public class UsuarioRepository : Repository {
+    public class UsuarioRepository : Repository {
        public const String Activo = "Activo";
        public const String NoActivo = "Inactivo";
 
@@ -46,8 +65,8 @@ namespace Models.Model
        {
            return this.Conexion.getDataTable(this.getDataSearch(usuario, like), true).DataTableToList<Usuario>();
        }
+      
 
 
-
-   }
+}
 }

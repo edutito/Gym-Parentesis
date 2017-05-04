@@ -89,6 +89,7 @@
             this.btnMostrarUsuarios.TabIndex = 13;
             this.btnMostrarUsuarios.Text = "Mostrar Usuarios";
             this.btnMostrarUsuarios.UseVisualStyleBackColor = true;
+            this.btnMostrarUsuarios.Click += new System.EventHandler(this.btnMostrarUsuarios_Click);
             // 
             // btnIngresarNuevoUsuario
             // 
@@ -98,6 +99,7 @@
             this.btnIngresarNuevoUsuario.TabIndex = 12;
             this.btnIngresarNuevoUsuario.Text = "Ingresar Nuevo Usuario";
             this.btnIngresarNuevoUsuario.UseVisualStyleBackColor = true;
+            this.btnIngresarNuevoUsuario.Click += new System.EventHandler(this.btnIngresarNuevoUsuario_Click);
             // 
             // DGMostrarUsuarios
             // 
@@ -111,6 +113,8 @@
             this.DGMostrarUsuarios.ReadOnly = true;
             this.DGMostrarUsuarios.Size = new System.Drawing.Size(857, 291);
             this.DGMostrarUsuarios.TabIndex = 11;
+            this.DGMostrarUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGMostrarUsuarios_CellContentClick);
+            this.DGMostrarUsuarios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGMostrarUsuarios_CellMouseClick);
             // 
             // FrmMostrar
             // 

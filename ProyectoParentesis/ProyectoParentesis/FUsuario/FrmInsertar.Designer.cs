@@ -40,7 +40,7 @@
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnLimpiarDatos = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -144,21 +144,21 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // btnLimpiarDatos
+            // btnLimpiar
             // 
-            this.btnLimpiarDatos.Location = new System.Drawing.Point(149, 260);
-            this.btnLimpiarDatos.Name = "btnLimpiarDatos";
-            this.btnLimpiarDatos.Size = new System.Drawing.Size(93, 23);
-            this.btnLimpiarDatos.TabIndex = 18;
-            this.btnLimpiarDatos.Text = "Limpiar Datos";
-            this.btnLimpiarDatos.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Location = new System.Drawing.Point(149, 260);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(93, 23);
+            this.btnLimpiar.TabIndex = 18;
+            this.btnLimpiar.Text = "Limpiar Datos";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // FrmInsertar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(412, 320);
-            this.Controls.Add(this.btnLimpiarDatos);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cmbEstado);
@@ -192,6 +192,6 @@
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnLimpiarDatos;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
