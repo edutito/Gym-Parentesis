@@ -104,9 +104,7 @@ namespace ProyectoParentesis.FCliente
 
 
         }
-
-
-
+        
         private void limpiardatos()
         {
             this.txtNombre.Clear();
