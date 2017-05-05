@@ -107,6 +107,7 @@
             this.btnMostrarPagosMatriculas.TabIndex = 13;
             this.btnMostrarPagosMatriculas.Text = "Mostrar Clientes con Matricula Paga";
             this.btnMostrarPagosMatriculas.UseVisualStyleBackColor = true;
+            this.btnMostrarPagosMatriculas.Click += new System.EventHandler(this.btnMostrarPagosMatriculas_Click);
             // 
             // btnIngresarPagoMatricula
             // 
@@ -116,6 +117,7 @@
             this.btnIngresarPagoMatricula.TabIndex = 12;
             this.btnIngresarPagoMatricula.Text = "Ingresar Nuevo Pago de Matricula";
             this.btnIngresarPagoMatricula.UseVisualStyleBackColor = true;
+            this.btnIngresarPagoMatricula.Click += new System.EventHandler(this.btnIngresarPagoMatricula_Click);
             // 
             // DGMostrarClientes
             // 
@@ -129,6 +131,7 @@
             this.DGMostrarClientes.ReadOnly = true;
             this.DGMostrarClientes.Size = new System.Drawing.Size(868, 266);
             this.DGMostrarClientes.TabIndex = 11;
+            this.DGMostrarClientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGMostrarClientes_CellMouseClick);
             // 
             // FrmMostrar
             // 

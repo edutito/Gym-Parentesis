@@ -152,6 +152,7 @@
             this.btnLimpiar.TabIndex = 18;
             this.btnLimpiar.Text = "Limpiar Datos";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
             // 
             // FrmInsertar
             // 

@@ -14,8 +14,21 @@ namespace Models.Model
         public String Apellido { get; set; }
         public int Monto { get; set; }
         public int Cliente_id { get; set; }
-       
-    
+
+        public Pago_Matricula llenar(
+      
+       String Nombre_Cliente,
+       String Apellido,
+       int Monto)
+        {
+
+            this.Nombre_Cliente = Nombre_Cliente;
+            this.Apellido = Apellido;
+            this.Monto = Monto;
+
+
+            return this;
+        }
 
 
     }
@@ -35,6 +48,13 @@ namespace Models.Model
                 return instance ?? (instance = new Pago_MatriculaRepository());
             }
         }
+
+        public List<Pago_Matricula> getData(Pago_Matricula pago_matricula, bool like = false)
+        {
+            return this.Conexion.getDataTable(this.getDataSearch(pago_matricula, like), true).DataTableToList<Pago_Matricula>();
+        }
+
+
      }
 
       

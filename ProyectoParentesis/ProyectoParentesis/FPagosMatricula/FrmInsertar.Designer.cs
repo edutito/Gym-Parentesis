@@ -122,6 +122,7 @@
             this.btnLimpiar.TabIndex = 20;
             this.btnLimpiar.Text = "Limpiar Datos";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnGuardar
             // 
@@ -131,6 +132,7 @@
             this.btnGuardar.TabIndex = 19;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            
             // 
             // FrmInsertar
             // 
