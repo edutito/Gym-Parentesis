@@ -53,5 +53,11 @@ namespace ProyectoParentesis
             FUsuario.FrmMostrar frm = new FUsuario.FrmMostrar();
             frm.Show();
         }
+
+        private void registroPagosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FRegistroPago.FrmInsertar frm = new FRegistroPago.FrmInsertar();
+            frm.Show();
+        }
     }
 }

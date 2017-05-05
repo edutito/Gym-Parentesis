@@ -223,7 +223,10 @@ namespace Models
         }
 
         
-
+        public String parseDateToSql(DateTime date)
+        {
+            return "'" + date.ToString(Repository.dateFormat) + "'";
+        }
 
         
     }

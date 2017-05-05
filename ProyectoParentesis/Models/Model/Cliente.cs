@@ -38,6 +38,16 @@ namespace Models.Model
 
         }
 
+        public override String ToString()
+        {
+            return this.getFullName();
+        }
+
+        public String getFullName()
+        {
+            return this.Nombre + " " + this.Apellido; 
+        }
+
     }
 
     public class ClienteRepository : Repository
@@ -68,6 +78,15 @@ namespace Models.Model
                           " WHERE 1 = (SELECT  COUNT (P.id) FROM Pago AS P  WHERE P.Cliente_id = C.id )";
 
             return this.Conexion.getDataTable(Sql, true).DataTableToList<Cliente>(); ;
+        }
+
+        public List<Cliente> getClientesActivos()
+        {
+            Cliente cliente = new Cliente()
+            {
+                Estado = ClienteRepository.Activo
+            };       
+            return this.getData(cliente);
         }
 
         public List<Cliente> getData()
