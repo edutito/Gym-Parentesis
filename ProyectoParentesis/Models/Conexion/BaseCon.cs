@@ -53,7 +53,7 @@ namespace Models.Conexion
             try
             {
                 this.OpenConexion();
-                return this.lComando.ExecuteNonQuery();
+                return Convert.ToInt32(this.lComando.ExecuteScalar());
             }
             catch (Exception ex)
             {

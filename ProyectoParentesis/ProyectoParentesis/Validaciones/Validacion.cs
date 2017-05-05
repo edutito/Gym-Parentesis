@@ -13,7 +13,7 @@ namespace ProyectoParentesis.Validaciones
     {
 
         private Regex SoloLetras = new Regex(@"^[A-Za-z\s]+$"); // no numeros y no caracteres especiales         
-        private Regex SoloNumeros = new Regex(@"^\d$"); // no numeros 
+        private Regex SoloNumeros = new Regex(@"^[0-9]*$"); // no numeros 
         private Match match;
 
         public bool ValidarTexto(String valor, String error)
@@ -89,6 +89,22 @@ namespace ProyectoParentesis.Validaciones
              }
              return  true;
 
+        }
+
+        public bool ClienteYaPago(
+            DateTime Fecha_Inicio,
+            DateTime Fecha_Final,
+            int Cliente_id, String Error)
+        {
+            if (PagoRepository.Instance.ClienteYaPagado(
+             Fecha_Inicio,
+             Fecha_Final,
+             Cliente_id))
+            {
+                MessageBox.Show(Error);
+                return false;
+            }
+            return true;
         }
 
 
