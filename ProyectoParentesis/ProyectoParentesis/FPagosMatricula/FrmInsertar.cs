@@ -64,7 +64,12 @@ namespace ProyectoParentesis.FPagosMatricula
 
                 this.txtNombre.Text,
                 this.txtApellidos.Text,
-            Int32.Parse(this.txtMontoMatricula.Text));
+            Int32.Parse(this.txtMontoMatricula.Text),
+            this.txtIdentificacion.Text
+
+            );
+            
+
 
             Pago_MatriculaRepository.Instance.persist(pago_matricula)
                .flush();
@@ -91,6 +96,7 @@ namespace ProyectoParentesis.FPagosMatricula
             this.txtNombre.Clear();
             this.txtApellidos.Clear();
             this.txtMontoMatricula.Clear();
+            this.txtIdentificacion.Clear();
 
         }
 
@@ -131,14 +137,17 @@ namespace ProyectoParentesis.FPagosMatricula
         }
 
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLimpiar_Click_1(object sender, EventArgs e)
         {
             this.limpiardatos();
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+            if (this.validar())
+            {
+                this.Salvar();
+            }
         }
 
 

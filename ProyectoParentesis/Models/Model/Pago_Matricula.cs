@@ -19,12 +19,16 @@ namespace Models.Model
       
        String Nombre_Cliente,
        String Apellido,
-       int Monto)
+       int Monto,
+       int Cliente_id    
+            
+            )
         {
 
             this.Nombre_Cliente = Nombre_Cliente;
             this.Apellido = Apellido;
             this.Monto = Monto;
+            this.Cliente_id = Cliente_id;
 
 
             return this;

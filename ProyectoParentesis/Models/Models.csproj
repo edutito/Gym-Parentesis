@@ -46,6 +46,7 @@
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Entrada_Producto.cs" />
     <Compile Include="Model\Instructor.cs" />
+    <Compile Include="Model\Inventario_Tienda.cs" />
     <Compile Include="Model\Producto.cs" />
     <Compile Include="Model\Pago.cs" />
     <Compile Include="Model\Pago_Matricula.cs" />

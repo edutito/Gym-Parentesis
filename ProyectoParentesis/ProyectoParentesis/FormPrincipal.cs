@@ -56,8 +56,14 @@ namespace ProyectoParentesis
 
         private void registroPagosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FRegistroPago.FrmInsertar frm = new FRegistroPago.FrmInsertar();
+
+        }
+
+        private void pagosMatriculaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FPagosMatricula.FrmMostrar frm = new FPagosMatricula.FrmMostrar();
             frm.Show();
+
         }
     }
 }
