@@ -64,12 +64,12 @@ namespace Models.Model
             String cmd = "SELECT "+
                          "COUNT(P.ID) " +
                          "FROM Pago AS P " +
-                         "WHERE P.FECHA_INICIO >= {0} " +
-                         "AND P.FECHA_FINAL <= {1} "+
-                         "AND P.CLIENTE_ID = {2}";
+                         "WHERE (P.FECHA_INICIO >= {0} AND P.FECHA_FINAL <= {1} ) " +
+                         "AND P.CLIENTE_ID = {2} ";
+            
             cmd = String.Format(cmd,
-                this.parseDateToSql(Fecha_Inicio),
-                this.parseDateToSql(Fecha_Final),
+                this.parseDateToSql(Fecha_Inicio.Date),
+                this.parseDateToSql(Fecha_Final.Date),
                 Cliente_id.ToString()
                 );
 

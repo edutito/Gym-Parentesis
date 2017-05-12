@@ -60,14 +60,14 @@ namespace ProyectoParentesis.FPagosMatricula
                 pago_matricula = this.pago_matricula;
             }
 
-            pago_matricula = pago_matricula.llenar(
+            //pago_matricula = pago_matricula.llenar(
 
-                this.txtNombre.Text,
-                this.txtApellidos.Text,
-            Int32.Parse(this.txtMontoMatricula.Text),
-            this.txtIdentificacion.Text
+            //    this.txtNombre.Text,
+            //    this.txtApellidos.Text,
+            //Int32.Parse(this.txtMontoMatricula.Text),
+            //this.txtIdentificacion.Text
 
-            );
+            //);
             
 
 
@@ -96,7 +96,7 @@ namespace ProyectoParentesis.FPagosMatricula
             this.txtNombre.Clear();
             this.txtApellidos.Clear();
             this.txtMontoMatricula.Clear();
-            this.txtIdentificacion.Clear();
+            //this.txtIdentificacion.Clear();
 
         }
 
