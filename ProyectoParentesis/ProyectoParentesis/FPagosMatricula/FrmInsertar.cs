@@ -34,14 +34,18 @@ namespace ProyectoParentesis.FPagosMatricula
         {
             this.txtNombre.Text = this.pago_matricula.Nombre_Cliente;
             this.txtApellidos.Text = this.pago_matricula.Apellido;
-
             this.txtMontoMatricula.Text = this.txtMontoMatricula.ToString();
+            
 
         }
 
         private void populate()
         {
-
+            this.cmbClientes.Items.Clear();
+            foreach (Cliente cliente in ClienteRepository.Instance.getClientesActivos())
+            {
+                this.cmbClientes.Items.Add(cliente);
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -64,9 +68,10 @@ namespace ProyectoParentesis.FPagosMatricula
 
                 this.txtNombre.Text,
                 this.txtApellidos.Text,
-            Int32.Parse(this.txtMontoMatricula.Text),
-            this.txtIdentificacion.Text
-
+                Int32.Parse(this.txtMontoMatricula.Text),
+                ((Cliente)this.cmbClientes.SelectedItem).Id
+   
+            
             );
             
 
@@ -96,7 +101,8 @@ namespace ProyectoParentesis.FPagosMatricula
             this.txtNombre.Clear();
             this.txtApellidos.Clear();
             this.txtMontoMatricula.Clear();
-            this.txtIdentificacion.Clear();
+            this.populate();
+                
 
         }
 
@@ -136,6 +142,7 @@ namespace ProyectoParentesis.FPagosMatricula
             return true;
         }
 
+      
 
         private void btnLimpiar_Click_1(object sender, EventArgs e)
         {
