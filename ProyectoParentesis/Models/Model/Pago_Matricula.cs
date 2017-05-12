@@ -12,17 +12,15 @@ namespace Models.Model
     {
         public String Nombre_Cliente { get; set; }
         public String Apellido { get; set; }
-        public int Monto { get; set; }
-        public int Cliente_id { get; set; }
+        public int? Monto  { get; set; }
+        public int? Cliente_id { get; set; }
 
         public Pago_Matricula llenar(
-      
-       String Nombre_Cliente,
-       String Apellido,
-       int Monto,
-       int Cliente_id    
-            
-            )
+        String Nombre_Cliente,
+        String Apellido,
+        int Monto,
+        int Cliente_id 
+        )
         {
 
             this.Nombre_Cliente = Nombre_Cliente;
@@ -30,8 +28,13 @@ namespace Models.Model
             this.Monto = Monto;
             this.Cliente_id = Cliente_id;
 
-
             return this;
+        }
+        public Pago_Matricula()
+        {
+            this.Monto = null;
+            this.Cliente_id = null;
+
         }
 
 

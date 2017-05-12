@@ -38,7 +38,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbClientes = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtApellidos
@@ -127,20 +127,21 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
-            // comboBox1
+            // cmbClientes
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(140, 111);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 22;
+            this.cmbClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbClientes.FormattingEnabled = true;
+            this.cmbClientes.Location = new System.Drawing.Point(140, 111);
+            this.cmbClientes.Name = "cmbClientes";
+            this.cmbClientes.Size = new System.Drawing.Size(272, 21);
+            this.cmbClientes.TabIndex = 22;
             // 
             // FrmInsertar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 238);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbClientes);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnGuardar);
@@ -170,6 +171,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbClientes;
     }
 }
