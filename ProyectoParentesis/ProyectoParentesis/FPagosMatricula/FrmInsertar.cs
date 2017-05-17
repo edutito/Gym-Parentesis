@@ -64,8 +64,7 @@ namespace ProyectoParentesis.FPagosMatricula
                 pago_matricula = this.pago_matricula;
             }
 
-            //pago_matricula = pago_matricula.llenar(
-
+            pago_matricula = pago_matricula.llenar(
                 this.txtNombre.Text,
                 this.txtApellidos.Text,
                 Int32.Parse(this.txtMontoMatricula.Text),
