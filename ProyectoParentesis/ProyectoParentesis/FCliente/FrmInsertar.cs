@@ -256,5 +256,10 @@ namespace ProyectoParentesis.FCliente
         {
 
         }
+
+        private void FrmInsertar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

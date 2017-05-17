@@ -230,6 +230,7 @@
             this.Controls.Add(this.txtNombre);
             this.Name = "FrmInsertar";
             this.Text = "Datos del Cliente";
+            this.Load += new System.EventHandler(this.FrmInsertar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
