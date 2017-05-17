@@ -147,7 +147,7 @@ namespace ProyectoParentesis.FInstructor
                 return false;
             }
 
-            if (!Contenedor.Contenedor.getValidacion().ValidarSoloNumero(this.txtTelefono.Text, "Campo telefono solo acepta Numeros"))
+            if (!Contenedor.Contenedor.getValidacion().ValidarSoloNumero(this.txtTelefono.Text, "Campo telefono solo acepta Numeros y sin espacios entre ellos "))
             {
                 return false;
             }
