@@ -13,7 +13,8 @@ namespace ProyectoParentesis.FRegistroPago
 {
     public partial class FrmInsertar : Form
     {
-        private Pago pago; private FrmMostrar frmMostrar;
+        private Pago pago;
+        private FrmMostrar frmMostrar;
         private void FrmInsertar_Load(object sender, EventArgs e)
         {
             this.limpiardatos();

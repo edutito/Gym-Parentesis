@@ -41,7 +41,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(474, 156);
+            this.btnCancelar.Location = new System.Drawing.Point(460, 96);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(97, 34);
             this.btnCancelar.TabIndex = 32;
@@ -50,7 +50,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(474, 87);
+            this.btnLimpiar.Location = new System.Drawing.Point(460, 56);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(97, 34);
             this.btnLimpiar.TabIndex = 31;
@@ -59,7 +59,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(474, 23);
+            this.btnGuardar.Location = new System.Drawing.Point(460, 19);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(97, 31);
             this.btnGuardar.TabIndex = 30;
@@ -70,7 +70,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 120);
+            this.label7.Location = new System.Drawing.Point(18, 56);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 13);
             this.label7.TabIndex = 28;
@@ -96,7 +96,7 @@
             // 
             this.cmbClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbClientes.FormattingEnabled = true;
-            this.cmbClientes.Location = new System.Drawing.Point(109, 117);
+            this.cmbClientes.Location = new System.Drawing.Point(109, 53);
             this.cmbClientes.Name = "cmbClientes";
             this.cmbClientes.Size = new System.Drawing.Size(277, 21);
             this.cmbClientes.TabIndex = 35;
@@ -104,7 +104,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 156);
+            this.label3.Location = new System.Drawing.Point(18, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 36;
@@ -112,7 +112,7 @@
             // 
             // txtMonto
             // 
-            this.txtMonto.Location = new System.Drawing.Point(109, 156);
+            this.txtMonto.Location = new System.Drawing.Point(109, 92);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(277, 20);
             this.txtMonto.TabIndex = 37;
@@ -121,7 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 303);
+            this.ClientSize = new System.Drawing.Size(595, 146);
             this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbClientes);

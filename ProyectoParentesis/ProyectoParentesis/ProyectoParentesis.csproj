@@ -168,6 +168,9 @@
     <EmbeddedResource Include="FRegistroPago\FrmInsertar.resx">
       <DependentUpon>FrmInsertar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FRegistroPago\FrmMostrar.resx">
+      <DependentUpon>FrmMostrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmReports\FrmClientesPrimerIngreso.resx">
       <DependentUpon>FrmClientesPrimerIngreso.cs</DependentUpon>
     </EmbeddedResource>

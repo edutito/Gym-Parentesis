@@ -31,16 +31,14 @@ namespace Models.Extensions
                     {
                         try
                         {
-
-                            //#if DEBUG
-                            //if (prop.Name == "Id")
-                            //{
-                            //    var x = prop;
-                            //}
-                            //#endif
                             String name = prop.Name == "Id" ? "id" : prop.Name;
                             PropertyInfo propertyInfo = obj.GetType().GetProperty(prop.Name);
-                            propertyInfo.SetValue(obj, Convert.ChangeType(row[name], propertyInfo.PropertyType), null);
+                            Type t = Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType;
+                            var value = row[name];
+                            object safeValue = (value == null) ? null : Convert.ChangeType(value, t);
+
+                            propertyInfo.SetValue(obj, safeValue, null);
+                            //propertyInfo.SetValue(obj, Convert.ChangeType(row[name], propertyInfo.PropertyType), null);
                         }
                         catch
                         {                            

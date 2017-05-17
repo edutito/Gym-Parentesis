@@ -13,13 +13,21 @@ namespace Models.Model
 
         public DateTime Fecha_Inicio { get; set; }
         public DateTime Fecha_Final { get; set; }
-        public int Cliente_id { get; set; }
-        public int Id_Usuario { get; set; }
+        public int? Cliente_id { get; set; }
+        public int? Id_Usuario { get; set; }
         public int Monto { get; set; }
 
         public Cliente getCliente()
         {
-            return ClienteRepository.Instance.getData(new Cliente() { Id = this.Cliente_id }).First();
+            if (this.Cliente_id != null)
+                return ClienteRepository.Instance.getData(new Cliente() { Id = (int) this.Cliente_id }).First();
+            else return null;
+        }
+
+        public Pago(): base()
+        {
+            this.Cliente_id = null;
+            this.Id_Usuario = null;
         }
 
         public Pago llenar(
@@ -54,6 +62,10 @@ namespace Models.Model
             {
                 return instance ?? (instance = new PagoRepository());
             }
+        }  
+        public List<Pago> getData(Pago cliente, bool like = false)
+        {
+            return this.Conexion.getDataTable(this.getDataSearch(cliente, like), true).DataTableToList<Pago>();
         }
 
         public bool ClienteYaPagado(
