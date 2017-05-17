@@ -19,14 +19,45 @@ namespace Models.Model
         public String Estado { get; set; }
 
 
+        public Producto llenar(
+         String Nombre,
+         String Codigo,
+         
+         int Precio  ,
+         String Estado)
+        {
+            this.Nombre = Nombre;
+            this.Codigo = Codigo;
+            this.Cantidad = 0;
+            this.Precio = Precio;
+            this.Estado = Estado;
+
+
+            return this;
+
+        }
+
+
     }
 
-   public class ProductoRepository : Repository
-   {
+   public class ProductoRepository : Repository {
+        public const String Activo = "En Inventario";
+       public const String NoActivo = "Agotado";
+
+       public List<String> getEstados()
+       {
+           return new List<String> { Activo, NoActivo };
+       }
+   
 
        public List<Producto> getData()
        {
            return this.Conexion.getData(this.table).DataTableToList<Producto>();
+       }
+
+       public List<Producto> getData(Producto producto, bool like = false)
+       {
+           return this.Conexion.getDataTable(this.getDataSearch(producto, like), true).DataTableToList<Producto>();
        }
 
        private static ProductoRepository instance;
@@ -40,3 +71,4 @@ namespace Models.Model
 
    }
 }
+

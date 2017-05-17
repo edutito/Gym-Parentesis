@@ -105,6 +105,18 @@
     <Compile Include="FPermisos\FrmInsertar.Designer.cs">
       <DependentUpon>FrmInsertar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FProductos\FrmInsertar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FProductos\FrmInsertar.Designer.cs">
+      <DependentUpon>FrmInsertar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FProductos\FrmMostrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FProductos\FrmMostrar.Designer.cs">
+      <DependentUpon>FrmMostrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRegistroPago\FrmInsertar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +176,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FPermisos\FrmInsertar.resx">
       <DependentUpon>FrmInsertar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FProductos\FrmInsertar.resx">
+      <DependentUpon>FrmInsertar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FProductos\FrmMostrar.resx">
+      <DependentUpon>FrmMostrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRegistroPago\FrmInsertar.resx">
       <DependentUpon>FrmInsertar.cs</DependentUpon>
