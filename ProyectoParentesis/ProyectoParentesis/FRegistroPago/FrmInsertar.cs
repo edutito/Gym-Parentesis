@@ -140,5 +140,10 @@ namespace ProyectoParentesis.FRegistroPago
         {
             return this.dateInit.Value.AddMonths(1);
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

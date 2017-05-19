@@ -160,6 +160,11 @@ namespace ProyectoParentesis.FInstructor
 
             return true;
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 

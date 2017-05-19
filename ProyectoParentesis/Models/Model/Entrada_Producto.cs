@@ -9,7 +9,7 @@ namespace Models.Model
 {
    public class Entrada_Producto : BaseModel
     {
-        public String Nombre { get; set; }
+        
         public int producto_id { get; set; }
         public int Cantidad { get; set; }
         public int Producto_id { get; set; }
