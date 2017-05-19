@@ -30,7 +30,8 @@
         {
             this.DGClientesPrimerIngreso = new System.Windows.Forms.DataGridView();
             this.btnGenerarClientesPrimerIngreso = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExportarExcel = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGClientesPrimerIngreso)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,22 +56,33 @@
             this.btnGenerarClientesPrimerIngreso.UseVisualStyleBackColor = true;
             this.btnGenerarClientesPrimerIngreso.Click += new System.EventHandler(this.btnGenerarClientesPrimerIngreso_Click);
             // 
-            // button1
+            // btnExportarExcel
             // 
-            this.button1.Location = new System.Drawing.Point(286, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnExportarExcel.Location = new System.Drawing.Point(286, 30);
+            this.btnExportarExcel.Name = "btnExportarExcel";
+            this.btnExportarExcel.Size = new System.Drawing.Size(98, 32);
+            this.btnExportarExcel.TabIndex = 2;
+            this.btnExportarExcel.Text = "Exportar a Excel";
+            this.btnExportarExcel.UseVisualStyleBackColor = true;
+            this.btnExportarExcel.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(427, 30);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(98, 32);
+            this.btnSalir.TabIndex = 3;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FrmClientesPrimerIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 449);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnExportarExcel);
             this.Controls.Add(this.btnGenerarClientesPrimerIngreso);
             this.Controls.Add(this.DGClientesPrimerIngreso);
             this.Name = "FrmClientesPrimerIngreso";
@@ -85,6 +97,7 @@
 
         private System.Windows.Forms.DataGridView DGClientesPrimerIngreso;
         private System.Windows.Forms.Button btnGenerarClientesPrimerIngreso;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExportarExcel;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
