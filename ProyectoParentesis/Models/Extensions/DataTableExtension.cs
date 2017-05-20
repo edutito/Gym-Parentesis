@@ -36,9 +36,7 @@ namespace Models.Extensions
                             Type t = Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType;
                             var value = row[name];
                             object safeValue = (value == null) ? null : Convert.ChangeType(value, t);
-
-                            propertyInfo.SetValue(obj, safeValue, null);
-                            //propertyInfo.SetValue(obj, Convert.ChangeType(row[name], propertyInfo.PropertyType), null);
+                            propertyInfo.SetValue(obj, safeValue, null);                            
                         }
                         catch
                         {                            

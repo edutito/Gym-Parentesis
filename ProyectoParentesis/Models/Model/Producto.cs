@@ -13,28 +13,35 @@ namespace Models.Model
     {
         public String Nombre { get; set; }
         public String Codigo { get; set; }
-        public int Cantidad { get; set; }
-        public int Precio { get; set; }
-        
+        public int? Cantidad { get; set; }
+        public int? Precio { get; set; }        
         public String Estado { get; set; }
-
 
         public Producto llenar(
          String Nombre,
-         String Codigo,
-         
-         int Precio  ,
-         String Estado)
+         String Codigo,         
+         int Precio,
+         String Estado
+            )
         {
             this.Nombre = Nombre;
             this.Codigo = Codigo;
             this.Cantidad = 0;
             this.Precio = Precio;
-            this.Estado = Estado;
-
-
+            this.Estado = Estado;        
             return this;
 
+        }
+
+        public override String ToString()
+        {
+            return this.Nombre;
+        }
+
+        public Producto()
+        {
+            this.Cantidad = null;
+            this.Precio = null;
         }
 
 

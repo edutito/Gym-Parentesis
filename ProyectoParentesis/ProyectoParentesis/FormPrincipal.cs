@@ -66,5 +66,11 @@ namespace ProyectoParentesis
             frm.Show();
 
         }
+
+        private void entradasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FProductos.Entrada.FInsertar frm = new FProductos.Entrada.FInsertar();
+            frm.Show();
+        }
     }
 }

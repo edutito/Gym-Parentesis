@@ -59,7 +59,7 @@
             // 
             // btnMostrarClientes
             // 
-            this.btnMostrarClientes.Location = new System.Drawing.Point(639, 52);
+            this.btnMostrarClientes.Location = new System.Drawing.Point(639, 51);
             this.btnMostrarClientes.Name = "btnMostrarClientes";
             this.btnMostrarClientes.Size = new System.Drawing.Size(156, 32);
             this.btnMostrarClientes.TabIndex = 13;
