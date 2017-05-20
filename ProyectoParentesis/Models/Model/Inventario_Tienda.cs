@@ -13,7 +13,7 @@ namespace Models.Model
         public String Nombre { get; set; }
         public int Cantidad { get; set; }
         public int Precio { get; set; }
-        public String Codigo { get; set; }
+        public int  Producto_Id { get; set; }
         
          
     }

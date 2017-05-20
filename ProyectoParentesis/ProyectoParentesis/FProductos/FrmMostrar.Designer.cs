@@ -89,6 +89,7 @@
             this.btnMostrarProductos.TabIndex = 22;
             this.btnMostrarProductos.Text = "Mostrar Productos";
             this.btnMostrarProductos.UseVisualStyleBackColor = true;
+            this.btnMostrarProductos.Click += new System.EventHandler(this.btnMostrarProductos_Click);
             // 
             // btnIngresarProducto
             // 
@@ -98,6 +99,7 @@
             this.btnIngresarProducto.TabIndex = 21;
             this.btnIngresarProducto.Text = "Ingresar Nuevo Producto";
             this.btnIngresarProducto.UseVisualStyleBackColor = true;
+            this.btnIngresarProducto.Click += new System.EventHandler(this.btnIngresarProducto_Click);
             // 
             // DGMostrarProductos
             // 

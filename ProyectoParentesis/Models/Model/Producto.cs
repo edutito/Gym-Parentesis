@@ -48,7 +48,7 @@ namespace Models.Model
     }
 
    public class ProductoRepository : Repository {
-        public const String Activo = "En Inventario";
+        public const String Activo = "En Existencia";
        public const String NoActivo = "Agotado";
 
        public List<String> getEstados()

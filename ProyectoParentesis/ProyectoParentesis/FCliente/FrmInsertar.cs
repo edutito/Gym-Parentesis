@@ -194,7 +194,7 @@ namespace ProyectoParentesis.FCliente
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)

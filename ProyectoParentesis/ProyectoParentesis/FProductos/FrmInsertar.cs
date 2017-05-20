@@ -81,22 +81,13 @@ namespace ProyectoParentesis.FProductos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
+            if (this.validar())
+            {
+                this.Salvar();
+            }
         }
 
-        //public void buscar()
-        //{
-        //    Producto producto = new Producto();
-
-        //    producto.Nombre = txtNombre.Text;
-        //    producto.Codigo = txtCodigo.Text;
-
-
-        //    this.LlenarData(
-        //       ProductoRepository.Instance.getData(producto, true)
-        //        );
-        //}
-
+        
 
         private void llenarData()
         {
@@ -194,9 +185,11 @@ namespace ProyectoParentesis.FProductos
 
             this.txtCodigo.Clear();
 
+
             this.txtPrecio.Clear();
 
-            //this.txtApellido.Clear();
+            this.cmbEstado.Text = Models.Model.ProductoRepository.Activo;
+
 
         }
 
@@ -250,6 +243,16 @@ namespace ProyectoParentesis.FProductos
 
             return true;
 
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            this.limpiardatos();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
 
