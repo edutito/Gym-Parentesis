@@ -40,8 +40,9 @@ namespace Models.Model
     public class UsuarioRepository : Repository {
        public const String Activo = "Activo";
        public const String NoActivo = "Inactivo";
+        protected String orderBy = "Nombre ASC";
 
-       public List<String> getEstados()
+        public List<String> getEstados()
        {
            return new List<String> { Activo, NoActivo };
        }

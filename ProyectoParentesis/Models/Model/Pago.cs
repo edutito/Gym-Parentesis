@@ -15,7 +15,7 @@ namespace Models.Model
         public DateTime Fecha_Final { get; set; }
         public int? Cliente_id { get; set; }
         public int? Id_Usuario { get; set; }
-        public int Monto { get; set; }
+        public int? Monto { get; set; }
 
         public Cliente getCliente()
         {
@@ -28,6 +28,7 @@ namespace Models.Model
         {
             this.Cliente_id = null;
             this.Id_Usuario = null;
+            this.Monto = null;
         }
 
         public Pago llenar(
@@ -51,11 +52,12 @@ namespace Models.Model
     public class PagoRepository : Repository {
 
         public const int MONTO = 20000;
+        protected String orderBy = "FECHA_INICIO DESC";
         public List<Pago> getData()
         {
             return this.Conexion.getData(this.table).DataTableToList<Pago>();
         }
-               private static PagoRepository instance;
+        private static PagoRepository instance;
         public static PagoRepository Instance
         {
             get
@@ -65,8 +67,7 @@ namespace Models.Model
         }  
         public List<Pago> getData(Pago cliente, bool like = false)
         {
-            String query = this.getDataSearch(cliente, like);
-            query += "order by FECHA_INICIO";
+            String query = this.getDataSearch(cliente, like);            
             return this.Conexion.getDataTable(query, true).DataTableToList<Pago>();
         }
 

@@ -32,7 +32,8 @@ namespace Models.Model
 
    public class Entrada_ProductoRepository : Repository {
 
-       public List<Entrada_Producto> getData()
+        protected String orderBy = "Fecha_Creacion DESC";
+        public List<Entrada_Producto> getData()
        {
            return this.Conexion.getData(this.table).DataTableToList<Entrada_Producto>();
        }

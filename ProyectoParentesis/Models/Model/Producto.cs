@@ -48,8 +48,9 @@ namespace Models.Model
    public class ProductoRepository : Repository {
         public const String Activo = "En Existencia";
        public const String NoActivo = "Agotado";
+        protected String orderBy = "Nombre ASC";
 
-       public List<String> getEstados()
+        public List<String> getEstados()
        {
            return new List<String> { Activo, NoActivo };
        }
@@ -76,4 +77,4 @@ namespace Models.Model
 
    }
 }
-
+

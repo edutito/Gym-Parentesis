@@ -40,7 +40,7 @@ namespace Models.Model
 
     public class InstructorRepository : Repository
     {
-
+        protected String orderBy = "Nombre ASC";
         public const String Activo = "Activo";
         public const String NoActivo = "Inactivo";
 
