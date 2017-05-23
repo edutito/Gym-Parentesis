@@ -28,18 +28,14 @@ namespace ProyectoParentesis.FRegistroPago
             this.frmMostrar = frmMostrar;
         }
 
-
         private void llenarData()
         {
-            this.txtMonto.Text = this.pago.Monto.ToString();
-            this.dateInit.Value = this.pago.Fecha_Inicio;            
             this.cmbClientes.SelectedItem = this.pago.getCliente();
         }
 
         private void limpiardatos()
         {
             this.populate();
-            this.txtMonto.Text = PagoRepository.MONTO.ToString();
         }
 
         public FrmInsertar(Pago pago = null, FrmMostrar frmMostrar = null)
@@ -56,7 +52,7 @@ namespace ProyectoParentesis.FRegistroPago
                 this.cmbClientes.Items.Add(cliente);
             }
             DateTime date = DateTime.Now;
-            this.dateInit.Value = date;
+            this.txtMesesPagos.Text = "1";
             
         }
          
@@ -79,18 +75,14 @@ namespace ProyectoParentesis.FRegistroPago
                 pago = new Pago();
             }
 
-            pago = pago.llenar(
-                this.dateInit.Value,
-                this.getFechaMasMes(),
-                ((Cliente)this.cmbClientes.SelectedItem).Id,
-                Contenedor.Contenedor.getUsuario().Id,
-                Int32.Parse(this.txtMonto.Text)
+            PagoRepository.Instance.MesesAPagar(
+                DateTime.Now,
+                Int32.Parse(this.txtMesesPagos.Text),
+                ((Cliente)this.cmbClientes.SelectedItem),
+                Contenedor.Contenedor.getUsuario(),
+                PagoRepository.MONTO
                 );
-
-            PagoRepository.Instance.persist(pago)
-               .flush();
-
-
+           
             if (this.pago != null)
             {
                 MessageBox.Show("Informacion Actualizada");                        
@@ -103,7 +95,7 @@ namespace ProyectoParentesis.FRegistroPago
 
             if (this.frmMostrar != null)
             {
-                //this.frmMostrar.buscar();
+                this.frmMostrar.buscar();
             }
 
 
@@ -117,15 +109,15 @@ namespace ProyectoParentesis.FRegistroPago
                 MessageBox.Show("Debes seleccionar un cliente.");
                 return false;
             }
-            if (!Contenedor.Contenedor.getValidacion().ValidarSoloNumero(this.txtMonto.Text, "Monto Solo permite numeros"))
+            if (!Contenedor.Contenedor.getValidacion().ValidarSoloNumero(this.txtMesesPagos.Text, "CAMPO Solo permite numeros"))
             {
                 return false;
             }
             
 
             if (this.pago == null && !Contenedor.Contenedor.getValidacion().ClienteYaPago(
-                this.dateInit.Value,
-                this.getFechaMasMes(),
+                DateTime.Now,
+                DateTime.Now.AddMonths(Int32.Parse(this.txtMesesPagos.Text)),
                 ((Cliente)this.cmbClientes.SelectedItem).Id, 
                 "Cliente ya pago en ese rango de fechas")
                 )
@@ -136,10 +128,6 @@ namespace ProyectoParentesis.FRegistroPago
             return true;
         }
 
-        public DateTime getFechaMasMes()
-        {
-            return this.dateInit.Value.AddMonths(1);
-        }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {

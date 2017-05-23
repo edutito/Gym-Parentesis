@@ -32,11 +32,9 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateInit = new System.Windows.Forms.DateTimePicker();
             this.cmbClientes = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtMonto = new System.Windows.Forms.TextBox();
+            this.txtMesesPagos = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -77,22 +75,6 @@
             this.label7.TabIndex = 28;
             this.label7.Text = "Cliente";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Fecha Inicio";
-            // 
-            // dateInit
-            // 
-            this.dateInit.Location = new System.Drawing.Point(109, 19);
-            this.dateInit.Name = "dateInit";
-            this.dateInit.Size = new System.Drawing.Size(277, 20);
-            this.dateInit.TabIndex = 34;
-            // 
             // cmbClientes
             // 
             this.cmbClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -102,36 +84,34 @@
             this.cmbClientes.Size = new System.Drawing.Size(277, 21);
             this.cmbClientes.TabIndex = 35;
             // 
-            // label3
+            // txtMesesPagos
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 92);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "Monto";
+            this.txtMesesPagos.Location = new System.Drawing.Point(108, 126);
+            this.txtMesesPagos.Name = "txtMesesPagos";
+            this.txtMesesPagos.Size = new System.Drawing.Size(200, 20);
+            this.txtMesesPagos.TabIndex = 39;
             // 
-            // txtMonto
+            // label2
             // 
-            this.txtMonto.Location = new System.Drawing.Point(109, 92);
-            this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Size = new System.Drawing.Size(277, 20);
-            this.txtMonto.TabIndex = 37;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 129);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "Meses a Pagar";
             // 
             // FrmInsertar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 146);
-            this.Controls.Add(this.txtMonto);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(814, 309);
+            this.Controls.Add(this.txtMesesPagos);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbClientes);
-            this.Controls.Add(this.dateInit);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label1);
             this.Name = "FrmInsertar";
             this.Text = "FrmInsertar";
             this.Load += new System.EventHandler(this.FrmInsertar_Load);
@@ -146,10 +126,8 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateInit;
         private System.Windows.Forms.ComboBox cmbClientes;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtMonto;
+        private System.Windows.Forms.TextBox txtMesesPagos;
+        private System.Windows.Forms.Label label2;
     }
 }
