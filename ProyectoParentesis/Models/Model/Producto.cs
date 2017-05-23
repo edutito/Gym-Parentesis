@@ -42,6 +42,7 @@ namespace Models.Model
         {
             this.Cantidad = null;
             this.Precio = null;
+
         }
 
 
