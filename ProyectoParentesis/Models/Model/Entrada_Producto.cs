@@ -24,7 +24,7 @@ namespace Models.Model
 
         public Producto getProducto()
         {            
-            List<Producto> list  = ProductoRepository.Instance.getData(new Producto() { Id = this.Producto_id });
+            List<Producto> list  = ProductoRepository.Instance.getData(new Producto() { Id = this.Producto_id },false);
             return list.First();
         }
 

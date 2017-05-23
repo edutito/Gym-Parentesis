@@ -43,10 +43,6 @@ namespace Models.Model
             this.Cantidad = null;
             this.Precio = null;
         }
-
-        }
-
-
     }
 
    public class ProductoRepository : Repository {
