@@ -112,11 +112,7 @@ namespace ProyectoParentesis.FrmReports
             this.Close();
         }
 
-
-
-
-
-
+        
     }
   }
 

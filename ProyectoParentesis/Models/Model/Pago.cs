@@ -90,6 +90,28 @@ namespace Models.Model
             return this.Conexion.EjecutarComando(cmd) > 0;
         }
 
+        public void MesesAPagar(DateTime Fecha_Inicio,int Cantidad_Meses,Cliente cliente, Usuario usuario,int Monto)
+        {
+            Pago pago;
+            for (int i = 1; i <= Cantidad_Meses; i++)
+            {
+                pago = new Pago();
+                pago.Fecha_Inicio = Fecha_Inicio;
+                Fecha_Inicio = Fecha_Inicio.AddMonths(1); // para convetilo en fecha final
+                pago.Fecha_Final = Fecha_Inicio;
+
+                pago.Monto= Monto;
+                pago.Cliente_id = cliente.Id;
+                pago.Id_Usuario = usuario.Id;
+
+                this.persist(pago);
+
+            }
+
+            this.flush();
+                       
+        }
+
     }
 
 }
