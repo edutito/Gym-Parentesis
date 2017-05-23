@@ -97,6 +97,7 @@
             this.label7.Size = new System.Drawing.Size(39, 13);
             this.label7.TabIndex = 16;
             this.label7.Text = "Cliente";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // btnCancelar
             // 
@@ -136,6 +137,7 @@
             this.cmbClientes.Name = "cmbClientes";
             this.cmbClientes.Size = new System.Drawing.Size(272, 21);
             this.cmbClientes.TabIndex = 22;
+            this.cmbClientes.SelectedIndexChanged += new System.EventHandler(this.cmbClientes_SelectedIndexChanged);
             // 
             // FrmInsertar
             // 

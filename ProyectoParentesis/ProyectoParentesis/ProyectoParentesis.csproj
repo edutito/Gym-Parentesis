@@ -111,6 +111,12 @@
     <Compile Include="FProductos\Entrada\FInsertar.Designer.cs">
       <DependentUpon>FInsertar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FProductos\Entrada\FrmMostrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FProductos\Entrada\FrmMostrar.Designer.cs">
+      <DependentUpon>FrmMostrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FProductos\FrmInsertar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FProductos\Entrada\FInsertar.resx">
       <DependentUpon>FInsertar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FProductos\Entrada\FrmMostrar.resx">
+      <DependentUpon>FrmMostrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FProductos\FrmInsertar.resx">
       <DependentUpon>FrmInsertar.cs</DependentUpon>
