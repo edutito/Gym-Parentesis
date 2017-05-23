@@ -9,14 +9,25 @@ namespace Models.Model
 {
    public class Entrada_Producto : BaseModel
     {
-        
+        public String Nombre { get; set; }
         public int producto_id { get; set; }
         public int Cantidad { get; set; }
         public int Producto_id { get; set; }
+        public Entrada_Producto llenar(            
+            int Cantidad,
+            int Producto_id
+        )
+        {
+            this.Producto_id = Producto_id;
+            this.Cantidad = Cantidad;
+            return this;
+        }
 
-
-
-
+        public Producto getProducto()
+        {            
+            List<Producto> list  = ProductoRepository.Instance.getData(new Producto() { Id = this.Producto_id });
+            return list.First();
+        }
 
     }
 
@@ -35,7 +46,17 @@ namespace Models.Model
             }
         }
 
+        public void crear(Entrada_Producto entrada)
+        {
+            Producto producto = entrada.getProducto();
+            producto.Cantidad += entrada.Cantidad;
+            ProductoRepository.Instance.persist(producto).flush();
+            this.persist(entrada).flush();
+        }
+
    }
 
    
 }
+
+    {                

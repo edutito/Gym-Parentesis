@@ -112,9 +112,7 @@ namespace ProyectoParentesis.FRegistroPago
                 pago.Cliente_id = ((Cliente)this.cmbCliente.SelectedItem).Id;
             }
             
-            this.LlenarData(
-               PagoRepository.Instance.getData(pago, false)
-                );
+            this.LlenarData(PagoRepository.Instance.getData(pago, false));
         }
 
         private void populate()

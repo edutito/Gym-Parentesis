@@ -65,7 +65,9 @@ namespace Models.Model
         }  
         public List<Pago> getData(Pago cliente, bool like = false)
         {
-            return this.Conexion.getDataTable(this.getDataSearch(cliente, like), true).DataTableToList<Pago>();
+            String query = this.getDataSearch(cliente, like);
+            query += "order by FECHA_INICIO";
+            return this.Conexion.getDataTable(query, true).DataTableToList<Pago>();
         }
 
         public bool ClienteYaPagado(
