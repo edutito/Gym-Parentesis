@@ -17,15 +17,16 @@ namespace ProyectoParentesis.FProductos.Entrada
     {
 
         private const int idColummn = 3;
-        private int clienteId;
+        private int Entrada_Producto_Id;
 
         public FrmMostrar()
         {
-            //InitializeComponent();
-            //this.ColocarColumnas();
-            //this.LlenarData(
-         //Entrada_Producto.Instance.getData()
-                //);
+            InitializeComponent();
+            this.ColocarColumnas();
+             this.populate();
+             this.LlenarData(
+            Entrada_ProductoRepository.Instance.getData()
+            );
         }
 
 
@@ -41,6 +42,16 @@ namespace ProyectoParentesis.FProductos.Entrada
             this.DGMostrarEntradaProductos.Columns["Id"].Visible = false;
 
 
+        }
+
+        private void populate()
+        {
+            this.cmbEntradaProductos.Items.Clear();
+            foreach (Producto producto in ProductoRepository.Instance.getData())
+            {
+                this.cmbEntradaProductos.Items.Add(producto);
+            }
+            
         }
 
         private void LlenarData(List<Entrada_Producto> entrada_productos)
@@ -79,32 +90,85 @@ namespace ProyectoParentesis.FProductos.Entrada
 
         }
 
-
-
-
-
-
         private void btnIngresarProducto_Click(object sender, EventArgs e)
         {
-            ////////FInsertar frm = new FInsertar(null,this);
-            //////frm.Show();
+            FInsertar frm = new FInsertar();
+            frm.Show();
         }
 
 
         public void buscar()
         {
+
+            if ( !this.validar() ) {               
+
+
             Entrada_Producto entrada_producto = new Entrada_Producto();
 
-            //entrada_producto. = cmbEntradaProductos.Select.va;
+            
+            entrada_producto.Producto_id = ((Producto)this.cmbEntradaProductos.SelectedItem).Id;
+
+            //Producto.SelectedItem(cmbEntradaProductos).id;
+
+                this.LlenarData(
+               Entrada_ProductoRepository.Instance.getData(entrada_producto, true)
+                );
+
+            };
+
+            }
+
+            
+             
+
+        private void btnMostrarProductos_Click(object sender, EventArgs e)
+        {
+            
+            {
+                this.buscar();
+            }
+            
+            
+        }
+
+
+        private bool validar()
+        {
+
+            if (this.cmbEntradaProductos.SelectedItem == null)
+            {
+                MessageBox.Show("Debes seleccionar un Producto.");
+                return false;
+            }
+
+            {
+                return false;
+            }
+
+            return true;
+        }
 
 
 
-            //    this.LlenarData(
-            //       //Entrada_ProductoRepository.Instance.getData(entrada_producto, true)
-            //        );
-            //}
+        //private void DGMostrarEntradaProductos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        //{
+        
+        //      if (e.Button == MouseButtons.Left && e.RowIndex > -1)
+        //    {
+
+        //        if (cmbEntradaProductos.SelectedRows.Count != 0 && this.cmbEntradaProductos["Id", e.RowIndex].Value != null)
+        //        {
+        //            Entrada_Producto entrada_producto = new Entrada_Producto();
+        //            entrada_producto.Id = Int32.Parse(this.entrada_producto["Id", e.RowIndex].Value.ToString());
+        //            entrada_producto = Entrada_Producto.Instance.getData(entrada_producto).First();
+        //            FrmInsertar frm = new FInsertar(entrada_producto, this);
+        //            frm.Show();
+        //        }
+        //    }
+        //}
+
 
 
         }
     }
-}
+

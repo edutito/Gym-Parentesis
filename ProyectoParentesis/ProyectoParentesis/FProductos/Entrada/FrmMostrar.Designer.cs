@@ -55,6 +55,7 @@
             this.btnMostrarProductos.TabIndex = 30;
             this.btnMostrarProductos.Text = "Mostrar las Entradas de  Productos";
             this.btnMostrarProductos.UseVisualStyleBackColor = true;
+            this.btnMostrarProductos.Click += new System.EventHandler(this.btnMostrarProductos_Click);
             // 
             // btnIngresarProducto
             // 
