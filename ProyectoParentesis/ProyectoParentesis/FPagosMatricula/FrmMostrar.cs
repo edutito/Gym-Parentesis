@@ -80,7 +80,7 @@ namespace ProyectoParentesis.FPagosMatricula
 
         private void btnIngresarPagoMatricula_Click(object sender, EventArgs e)
         {
-            FrmInsertar frm = new FrmInsertar(null, this);
+        FrmInsertar frm = new FrmInsertar(null, this);
             frm.Show();
         }
 

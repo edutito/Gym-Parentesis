@@ -85,7 +85,7 @@ namespace ProyectoParentesis.FProductos
             Producto producto = new Producto();
 
             producto.Nombre = txtNombre.Text;
-            producto.Codigo = txtCodigo.Text;
+          
 
 
             this.LlenarData(
@@ -104,6 +104,36 @@ namespace ProyectoParentesis.FProductos
         {
             FrmInsertar frm = new FrmInsertar(null, this);
             frm.Show();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DGMostrarProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
