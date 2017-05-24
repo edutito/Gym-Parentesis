@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,12 +31,17 @@ namespace Models.Model
 
    public class Entrada_ProductoRepository : Repository {
 
-        protected String orderBy = "Fecha_Creacion DESC";
+        
         public List<Entrada_Producto> getData()
-       {
+        {
            return this.Conexion.getData(this.table).DataTableToList<Entrada_Producto>();
-       }
-       private static Entrada_ProductoRepository instance;
+        }
+        
+        private Entrada_ProductoRepository(): base() {
+            this.orderBy = "Fecha_Creacion DESC";
+        }
+
+        private static Entrada_ProductoRepository instance;
         public static Entrada_ProductoRepository Instance
         {
             get

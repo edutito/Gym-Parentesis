@@ -12,7 +12,7 @@ namespace Models
         private readonly ConexionDB conexion;
         public String table;
         private String cmd;
-        protected String orderBy = "";
+        protected String orderBy;
         private static String dateFormat = "yyyy-MM-dd HH:mm:ss.fff";
 
         public ConexionDB Conexion
@@ -24,6 +24,7 @@ namespace Models
         {
             this.conexion = ConexionDB.Instance;
             this.table = this.GetType().Name.Replace("Repository","");
+            this.orderBy = "";
         }
 
         public void delete(int idBaseObject)

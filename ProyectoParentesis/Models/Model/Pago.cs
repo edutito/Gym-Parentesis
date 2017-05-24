@@ -51,12 +51,16 @@ namespace Models.Model
 
     public class PagoRepository : Repository {
 
-        public const int MONTO = 20000;
-        protected String orderBy = "FECHA_INICIO DESC";
+        public const int MONTO = 20000;        
         public List<Pago> getData()
         {
             return this.Conexion.getData(this.table).DataTableToList<Pago>();
         }
+
+        private PagoRepository(): base() {
+            this.orderBy = "FECHA_INICIO DESC";
+        }
+
         private static PagoRepository instance;
         public static PagoRepository Instance
         {
