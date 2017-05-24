@@ -45,6 +45,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(305, 20);
             this.txtCodigo.TabIndex = 27;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // txtNombre
             // 
@@ -52,6 +53,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(305, 20);
             this.txtNombre.TabIndex = 26;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // label3
             // 
@@ -61,6 +63,7 @@
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 25;
             this.label3.Text = "Codigo";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -70,6 +73,7 @@
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 24;
             this.label2.Text = "Nombre";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -80,6 +84,7 @@
             this.label1.Size = new System.Drawing.Size(188, 20);
             this.label1.TabIndex = 23;
             this.label1.Text = "Busqueda de Productos";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnMostrarProductos
             // 
@@ -113,6 +118,7 @@
             this.DGMostrarProductos.ReadOnly = true;
             this.DGMostrarProductos.Size = new System.Drawing.Size(846, 229);
             this.DGMostrarProductos.TabIndex = 20;
+            this.DGMostrarProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGMostrarProductos_CellContentClick);
             // 
             // FrmMostrar
             // 

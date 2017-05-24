@@ -16,15 +16,16 @@ namespace ProyectoParentesis.FProductos.Entrada
     public partial class FrmMostrar : Form
     {
 
-        private const int idColummn = 4;
+        private const int idColummn = 3;
         private int clienteId;
+
         public FrmMostrar()
         {
-            InitializeComponent();
-            this.ColocarColumnas();
-            this.LlenarData(
-         Entrada_Producto.Instance.getData()
-                );
+            //InitializeComponent();
+            //this.ColocarColumnas();
+            //this.LlenarData(
+         //Entrada_Producto.Instance.getData()
+                //);
         }
 
 
@@ -55,16 +56,28 @@ namespace ProyectoParentesis.FProductos.Entrada
                 this.DGMostrarEntradaProductos.Rows.Add(
 
                 entrada_producto.Cantidad,
-
-                entrada_producto.N
-                pago_matricula.Monto,
-                pago_matricula.Id
+                entrada_producto.getProducto().Nombre,
+                entrada_producto.Fecha_Creacion,
+                entrada_producto.Id
                                 );
             }
 
             this.AcomodarColumnas();
         }
 
+
+        private void AcomodarColumnas()
+        {
+
+
+            int colCount = this.DGMostrarEntradaProductos.Columns.Count;
+            colCount = colCount - 1; // =5
+            for (int i = 0; i < colCount; i++)
+            {
+                this.DGMostrarEntradaProductos.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+
+        }
 
 
 
@@ -73,6 +86,24 @@ namespace ProyectoParentesis.FProductos.Entrada
 
         private void btnIngresarProducto_Click(object sender, EventArgs e)
         {
+            ////////FInsertar frm = new FInsertar(null,this);
+            //////frm.Show();
+        }
+
+
+        public void buscar()
+        {
+            Entrada_Producto entrada_producto = new Entrada_Producto();
+
+            //entrada_producto. = cmbEntradaProductos.Select.va;
+
+
+
+            //    this.LlenarData(
+            //       //Entrada_ProductoRepository.Instance.getData(entrada_producto, true)
+            //        );
+            //}
+
 
         }
     }

@@ -32,7 +32,7 @@
             this.btnMostrarProductos = new System.Windows.Forms.Button();
             this.btnIngresarProducto = new System.Windows.Forms.Button();
             this.DGMostrarEntradaProductos = new System.Windows.Forms.DataGridView();
-            this.cmbClientes = new System.Windows.Forms.ComboBox();
+            this.cmbEntradaProductos = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGMostrarEntradaProductos)).BeginInit();
             this.SuspendLayout();
@@ -79,14 +79,14 @@
             this.DGMostrarEntradaProductos.Size = new System.Drawing.Size(864, 229);
             this.DGMostrarEntradaProductos.TabIndex = 28;
             // 
-            // cmbClientes
+            // cmbEntradaProductos
             // 
-            this.cmbClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbClientes.FormattingEnabled = true;
-            this.cmbClientes.Location = new System.Drawing.Point(134, 69);
-            this.cmbClientes.Name = "cmbClientes";
-            this.cmbClientes.Size = new System.Drawing.Size(272, 21);
-            this.cmbClientes.TabIndex = 36;
+            this.cmbEntradaProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEntradaProductos.FormattingEnabled = true;
+            this.cmbEntradaProductos.Location = new System.Drawing.Point(134, 69);
+            this.cmbEntradaProductos.Name = "cmbEntradaProductos";
+            this.cmbEntradaProductos.Size = new System.Drawing.Size(272, 21);
+            this.cmbEntradaProductos.TabIndex = 36;
             // 
             // label7
             // 
@@ -102,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 376);
-            this.Controls.Add(this.cmbClientes);
+            this.Controls.Add(this.cmbEntradaProductos);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMostrarProductos);
@@ -122,7 +122,7 @@
         private System.Windows.Forms.Button btnMostrarProductos;
         private System.Windows.Forms.Button btnIngresarProducto;
         private System.Windows.Forms.DataGridView DGMostrarEntradaProductos;
-        private System.Windows.Forms.ComboBox cmbClientes;
+        private System.Windows.Forms.ComboBox cmbEntradaProductos;
         private System.Windows.Forms.Label label7;
     }
 }
