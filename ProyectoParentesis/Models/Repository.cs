@@ -13,7 +13,9 @@ namespace Models
         public String table;
         private String cmd;
         protected String orderBy;
-        private static String dateFormat = "yyyy-MM-dd HH:mm:ss.fff";
+        //private static String dateFormat = "yyyy-MM-dd HH:mm:ss.fff";
+        private static String dateFormat = "s";
+        private static String dateNull = "0001-01-01T00:00:00"; // 0001-01-01 00:00:00.000
 
         public ConexionDB Conexion
         {
@@ -193,7 +195,7 @@ namespace Models
                     }
 
                 }
-                if (!String.IsNullOrEmpty(value) && value != "0001-01-01 00:00:00.000")
+                if (!String.IsNullOrEmpty(value) && value != dateNull)
                 {
                     if (value == "-1" && String.Equals(prop.Name, "ID", StringComparison.OrdinalIgnoreCase))
                     {
