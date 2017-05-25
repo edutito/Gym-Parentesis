@@ -85,6 +85,17 @@ namespace Models.Model
             return this.Conexion.getDataTable(Sql, true).DataTableToList<Cliente>(); ;
         }
 
+        public System.Data.DataTable getClientesPrimerIngresoDT()
+        {
+            String Sql = " SELECT C.Nombre, C.Apellido, C.Fecha_Ingreso, C.DNI, P.Monto, C.id" +
+                            " FROM Cliente AS C" +
+                            " inner join pago as P on C.id = P.Cliente_id" +
+                            "  Group by C.id, C.Nombre, C.Apellido, C.Fecha_Ingreso, C.dni,  P.Monto" +
+                            " having count(P.id) = 1" ;
+
+            return this.Conexion.getDataTable(Sql, true) ;
+        }
+
         public List<Cliente> getClientesActivos()
         {
             Cliente cliente = new Cliente()

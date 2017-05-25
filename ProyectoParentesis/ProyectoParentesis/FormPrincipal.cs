@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoParentesis.FCliente;
 
+
 namespace ProyectoParentesis
 {
     public partial class Formu_Principal : Form
@@ -44,6 +45,10 @@ namespace ProyectoParentesis
 
         private void generarClientesPrimerIngresoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+            
+
+
             FrmReports.FrmClientesPrimerIngreso frm = new FrmReports.FrmClientesPrimerIngreso()  ;
             frm.Show();
         }

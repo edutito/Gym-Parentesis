@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Reports.Reports {
+namespace Reports.PrimerIngreso {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace Reports.Reports {
         
         public override string FullResourceName {
             get {
-                return "Reports.Reports.PrimerIngreso.rpt";
+                return "Reports.PrimerIngreso.PrimerIngreso.rpt";
             }
             set {
                 // Do nothing

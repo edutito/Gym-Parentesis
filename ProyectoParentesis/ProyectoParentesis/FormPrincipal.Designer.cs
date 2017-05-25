@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formu_Principal));
             this.Menu = new System.Windows.Forms.MenuStrip();
             this.Mantenimiento = new System.Windows.Forms.ToolStripMenuItem();
             this.Item_Clientes = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +68,7 @@
             this.ayudaToolStripMenuItem});
             this.Menu.Location = new System.Drawing.Point(0, 0);
             this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(782, 24);
+            this.Menu.Size = new System.Drawing.Size(878, 24);
             this.Menu.TabIndex = 0;
             this.Menu.Text = "menuStrip1";
             // 
@@ -132,28 +133,28 @@
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // entradasToolStripMenuItem
             // 
             this.entradasToolStripMenuItem.Name = "entradasToolStripMenuItem";
-            this.entradasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.entradasToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.entradasToolStripMenuItem.Text = "Entradas";
             this.entradasToolStripMenuItem.Click += new System.EventHandler(this.entradasToolStripMenuItem_Click);
             // 
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.ventasToolStripMenuItem.Text = "Ventas";
             this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
             // 
             // ajustesToolStripMenuItem
             // 
             this.ajustesToolStripMenuItem.Name = "ajustesToolStripMenuItem";
-            this.ajustesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ajustesToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.ajustesToolStripMenuItem.Text = "Ajustes";
             // 
             // listadosToolStripMenuItem
@@ -253,8 +254,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 314);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(878, 320);
             this.Controls.Add(this.Menu);
+            this.DoubleBuffered = true;
             this.MainMenuStrip = this.Menu;
             this.Name = "Formu_Principal";
             this.Text = "Formulario Principal";
