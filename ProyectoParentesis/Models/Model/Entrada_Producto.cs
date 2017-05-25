@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -82,13 +82,7 @@ namespace Models.Model
             return this.Conexion.getDataTable(this.getDataSearch(producto, like), true).DataTableToList<Entrada_Producto>();
         }
 
-        public List<Entrada_Producto> getData()
-        {
-            return this.Conexion.getData(this.table).DataTableToList<Entrada_Producto>();
-        }
-
-       
-
+  
 
 
    }
