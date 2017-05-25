@@ -80,8 +80,15 @@ namespace ProyectoParentesis
 
         private void entradasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FProductos.Entrada.FInsertar frm = new FProductos.Entrada.FInsertar();
+            FProductos.Entrada.FrmMostrar frm = new FProductos.Entrada.FrmMostrar();
             frm.Show();
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FProductos.Venta.FrmInsertar frm = new FProductos.Venta.FrmInsertar();
+            frm.Show();
+
         }
     }
 }

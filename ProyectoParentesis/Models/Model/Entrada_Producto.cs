@@ -9,9 +9,13 @@ namespace Models.Model
 {
    public class Entrada_Producto : BaseModel
     {
-        public int Cantidad { get; set; }
-        public int Producto_id { get; set; }
-        public Entrada_Producto llenar(            
+        public int? Cantidad { get; set; }
+        public int? Producto_id { get; set; }
+
+
+   
+       public Entrada_Producto llenar(      
+      
             int Cantidad,
             int Producto_id
         )
@@ -21,10 +25,23 @@ namespace Models.Model
             return this;
         }
 
+       public Entrada_Producto(): base()
+        {
+            this.Cantidad = null;
+            this.Producto_id = null;
+        }
+        
+
+       
+
         public Producto getProducto()
-        {            
-            List<Producto> list  = ProductoRepository.Instance.getData(new Producto() { Id = this.Producto_id },false);
-            return list.First();
+        {
+            if (this.Producto_id != null)
+            {
+                List<Producto> list = ProductoRepository.Instance.getData(new Producto() { Id = (int)this.Producto_id }, false);
+                return list.First();
+            }
+            else return null;
         }
 
     }
@@ -50,6 +67,7 @@ namespace Models.Model
             }
         }
 
+
         public void crear(Entrada_Producto entrada)
         {
             Producto producto = entrada.getProducto();
@@ -58,7 +76,23 @@ namespace Models.Model
             this.persist(entrada).flush();
         }
 
+
+        public List<Entrada_Producto> getData(Entrada_Producto producto, bool like = false)
+        {
+            return this.Conexion.getDataTable(this.getDataSearch(producto, like), true).DataTableToList<Entrada_Producto>();
+        }
+
+        public List<Entrada_Producto> getData()
+        {
+            return this.Conexion.getData(this.table).DataTableToList<Entrada_Producto>();
+        }
+
+       
+
+
+
    }
+
 
    
 }

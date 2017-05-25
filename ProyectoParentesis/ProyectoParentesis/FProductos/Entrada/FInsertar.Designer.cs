@@ -41,7 +41,7 @@
             // 
             this.cmbProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProductos.FormattingEnabled = true;
-            this.cmbProductos.Location = new System.Drawing.Point(122, 23);
+            this.cmbProductos.Location = new System.Drawing.Point(122, 32);
             this.cmbProductos.Name = "cmbProductos";
             this.cmbProductos.Size = new System.Drawing.Size(277, 21);
             this.cmbProductos.TabIndex = 44;
@@ -78,7 +78,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(31, 59);
+            this.label7.Location = new System.Drawing.Point(31, 68);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 39;
@@ -87,7 +87,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 26);
+            this.label1.Location = new System.Drawing.Point(29, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 38;
@@ -95,7 +95,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(122, 59);
+            this.txtCantidad.Location = new System.Drawing.Point(122, 68);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(277, 20);
             this.txtCantidad.TabIndex = 46;
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 148);
+            this.ClientSize = new System.Drawing.Size(609, 162);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.cmbProductos);
             this.Controls.Add(this.btnCancelar);
