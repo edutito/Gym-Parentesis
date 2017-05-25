@@ -39,14 +39,18 @@ namespace Models.Model
     }
 
     public class InstructorRepository : Repository
-    {
-
+    {        
         public const String Activo = "Activo";
         public const String NoActivo = "Inactivo";
 
         public List<String> getEstados()
         {
             return new List<String> { Activo, NoActivo };
+        }
+
+        private InstructorRepository() : base()
+        {
+            this.orderBy = "Nombre ASC";
         }
 
         private static InstructorRepository instance;

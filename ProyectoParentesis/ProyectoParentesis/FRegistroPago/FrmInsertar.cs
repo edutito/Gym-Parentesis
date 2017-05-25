@@ -26,6 +26,8 @@ namespace ProyectoParentesis.FRegistroPago
                 this.btnLimpiar.Visible = false;
             }
             this.frmMostrar = frmMostrar;
+
+            this.mostrarMonto();
         }
 
         private void llenarData()
@@ -132,6 +134,40 @@ namespace ProyectoParentesis.FRegistroPago
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+
+        private void mostrarMonto()
+        {
+            if (this.txtMesesPagos.Text.All(Char.IsDigit) && !String.IsNullOrEmpty(this.txtMesesPagos.Text))
+            {
+                int meses = (Int32.Parse(this.txtMesesPagos.Text));
+                if (meses <= 12)
+                {
+                    this.txtMontoPagar.Text = String.Format("{0:n0}", meses * PagoRepository.MONTO);
+                }else
+                {
+                    MessageBox.Show("Maximo a pagar 12 meses.");
+                    this.txtMesesPagos.Text = "12";
+                }
+                
+            }else
+            {
+                this.txtMontoPagar.Text = "0";
+            }            
+        }
+
+        private void txtMesesPagos_KeyUp(object sender, KeyEventArgs e)
+        {
+            this.mostrarMonto();
+        }
+
+        private void txtMesesPagos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }                        
         }
     }
 }

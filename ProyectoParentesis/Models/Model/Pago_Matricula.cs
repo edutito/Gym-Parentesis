@@ -40,9 +40,13 @@ namespace Models.Model
 
     }
 
-     public class Pago_MatriculaRepository : Repository {
+     public class Pago_MatriculaRepository : Repository {    
 
-         public List<Pago_Matricula> getData()
+        private Pago_MatriculaRepository(): base() {
+            this.orderBy = "Fecha_Creacion DESC";
+        }
+
+        public List<Pago_Matricula> getData()
          {
              return this.Conexion.getData(this.table).DataTableToList<Pago_Matricula>();
          } 
