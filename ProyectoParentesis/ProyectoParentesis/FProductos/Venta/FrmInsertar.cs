@@ -65,7 +65,39 @@ namespace ProyectoParentesis.FProductos.Venta
 
         private void AgregarProduco()
         {
+            
+            
+            if (this.cmbProductos.SelectedItem == null)
+            {
+                MessageBox.Show("Debes seleccionar un Producto.");
 
+                return ;
+            }
+            String cantidadtxt=this.txtCantidad.Text;
+           if (cantidadtxt == "")
+           {
+               MessageBox.Show("Debes seleccionar un Producto.");
+
+               return;
+           }else if (!Contenedor.Contenedor.getValidacion().ValidarSoloNumero(cantidadtxt, "Campo Cantidad  solo acepta Numeros"))
+           {
+               return ;
+           }
+
+           Producto producto = this.cmbProductos.SelectedItem as Producto;
+            int cantidad =Int32.Parse(cantidadtxt);
+
+            DataGridViewRow row = new DataGridViewRow();
+
+                this.DGVVentaProductos.Rows.Add(
+
+                producto.Nombre,
+                cantidad,
+                producto.Precio,
+                (producto.Precio * cantidad),
+                producto.Id
+                                );
+                        this.AcomodarColumnas();
 
         }
 
@@ -84,6 +116,8 @@ namespace ProyectoParentesis.FProductos.Venta
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
+            this.AgregarProduco();
+
 
         }
 

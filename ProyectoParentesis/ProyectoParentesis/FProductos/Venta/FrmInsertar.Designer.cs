@@ -98,7 +98,7 @@
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(121, 31);
             this.btnAgregarProducto.TabIndex = 51;
-            this.btnAgregarProducto.Text = "Agreagar Producto";
+            this.btnAgregarProducto.Text = "Agregar Producto";
             this.btnAgregarProducto.UseVisualStyleBackColor = true;
             this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
@@ -118,7 +118,7 @@
             this.DGVVentaProductos.AllowUserToResizeColumns = false;
             this.DGVVentaProductos.AllowUserToResizeRows = false;
             this.DGVVentaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGVVentaProductos.BackgroundColor = System.Drawing.Color.Aquamarine;
+            this.DGVVentaProductos.BackgroundColor = System.Drawing.Color.Gray;
             this.DGVVentaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVVentaProductos.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.DGVVentaProductos.Location = new System.Drawing.Point(-4, 193);

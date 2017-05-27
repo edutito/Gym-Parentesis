@@ -178,12 +178,6 @@ namespace ProyectoParentesis.FCliente
             {
                 return false;
             }
-
-
-
-
-
-
             return true;
         }
 
