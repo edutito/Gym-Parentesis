@@ -73,6 +73,7 @@
             this.btnIngresarVentaProducto.TabIndex = 38;
             this.btnIngresarVentaProducto.Text = "Ingresar Nueva Venta de  Producto";
             this.btnIngresarVentaProducto.UseVisualStyleBackColor = true;
+            this.btnIngresarVentaProducto.Click += new System.EventHandler(this.btnIngresarVentaProducto_Click);
             // 
             // DGMostrarEntradaProductos
             // 

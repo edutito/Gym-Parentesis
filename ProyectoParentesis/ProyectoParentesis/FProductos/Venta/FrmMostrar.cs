@@ -16,5 +16,10 @@ namespace ProyectoParentesis.FProductos.Venta
         {
             InitializeComponent();
         }
+
+        private void btnIngresarVentaProducto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -123,8 +123,10 @@
             this.DGVVentaProductos.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.DGVVentaProductos.Location = new System.Drawing.Point(-4, 193);
             this.DGVVentaProductos.Name = "DGVVentaProductos";
-            this.DGVVentaProductos.Size = new System.Drawing.Size(927, 192);
+            this.DGVVentaProductos.Size = new System.Drawing.Size(987, 192);
             this.DGVVentaProductos.TabIndex = 55;
+            this.DGVVentaProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVVentaProductos_CellContentClick);
+            this.DGVVentaProductos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGVVentaProductos_CellMouseClick);
             // 
             // btnEliminar
             // 
@@ -134,6 +136,7 @@
             this.btnEliminar.TabIndex = 56;
             this.btnEliminar.Text = "Eliminar Producto";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -143,6 +146,7 @@
             this.btnModificar.TabIndex = 57;
             this.btnModificar.Text = "Modificar Producto";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // textBox1
             // 
