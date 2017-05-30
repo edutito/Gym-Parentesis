@@ -90,5 +90,10 @@ namespace ProyectoParentesis
             frm.Show();
 
         }
+
+        private void clientensMorososToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -166,6 +166,12 @@
     <Compile Include="FrmReports\FrmClientesPrimerIngreso.Designer.cs">
       <DependentUpon>FrmClientesPrimerIngreso.cs</DependentUpon>
     </Compile>
+    <Compile Include="FUsuarioPermiso\FrmInsertar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUsuarioPermiso\FrmInsertar.Designer.cs">
+      <DependentUpon>FrmInsertar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FUsuario\FrmInsertar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReports\FrmClientesPrimerIngreso.resx">
       <DependentUpon>FrmClientesPrimerIngreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUsuarioPermiso\FrmInsertar.resx">
+      <DependentUpon>FrmInsertar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FUsuario\FrmInsertar.resx">
       <DependentUpon>FrmInsertar.cs</DependentUpon>
