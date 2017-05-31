@@ -95,5 +95,14 @@ namespace ProyectoParentesis
         {
 
         }
+
+        private void perrmisosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FUsuarioPermiso.FrmInsertar frm = new FUsuarioPermiso.FrmInsertar();
+            frm.Show();
+        }
+
+
+        }
     }
-}
+

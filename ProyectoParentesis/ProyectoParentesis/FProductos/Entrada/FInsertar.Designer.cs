@@ -45,6 +45,7 @@
             this.cmbProductos.Name = "cmbProductos";
             this.cmbProductos.Size = new System.Drawing.Size(277, 21);
             this.cmbProductos.TabIndex = 44;
+            this.cmbProductos.SelectedIndexChanged += new System.EventHandler(this.cmbProductos_SelectedIndexChanged);
             // 
             // btnCancelar
             // 
@@ -54,6 +55,7 @@
             this.btnCancelar.TabIndex = 42;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnLimpiar
             // 
@@ -83,6 +85,7 @@
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 39;
             this.label7.Text = "Cantidad";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label1
             // 
@@ -92,6 +95,7 @@
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 38;
             this.label1.Text = "Producto";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtCantidad
             // 
@@ -99,6 +103,7 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(277, 20);
             this.txtCantidad.TabIndex = 46;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // FInsertar
             // 

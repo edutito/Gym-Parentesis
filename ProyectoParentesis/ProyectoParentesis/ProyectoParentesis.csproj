@@ -172,6 +172,12 @@
     <Compile Include="FUsuarioPermiso\FrmInsertar.Designer.cs">
       <DependentUpon>FrmInsertar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FUsuarioPermiso\FrmMostrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUsuarioPermiso\FrmMostrar.Designer.cs">
+      <DependentUpon>FrmMostrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FUsuario\FrmInsertar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FUsuarioPermiso\FrmInsertar.resx">
       <DependentUpon>FrmInsertar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUsuarioPermiso\FrmMostrar.resx">
+      <DependentUpon>FrmMostrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FUsuario\FrmInsertar.resx">
       <DependentUpon>FrmInsertar.cs</DependentUpon>

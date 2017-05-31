@@ -107,6 +107,24 @@ namespace ProyectoParentesis.Validaciones
             return true;
         }
 
+        public bool solounpermisoporusuario(int usuario, int permiso)
+        {
+
+            Usuario_Permisos usupe = new Usuario_Permisos();
+
+                usupe.Usuario_id = usuario;
+                usupe.Permiso_id = permiso;
+
+                if (Usuario_PermisosRepository.Instance.getData(usupe).Count > 0)
+            {
+                MessageBox.Show("Usuario ya posee permisos");
+
+                return false;
+
+            }
+            return true;
+
+        }
 
 
     }
