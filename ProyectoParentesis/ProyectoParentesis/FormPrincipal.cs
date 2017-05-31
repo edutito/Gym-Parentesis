@@ -45,10 +45,6 @@ namespace ProyectoParentesis
 
         private void generarClientesPrimerIngresoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-            
-
-
             FrmReports.FrmClientesPrimerIngreso frm = new FrmReports.FrmClientesPrimerIngreso()  ;
             frm.Show();
         }
@@ -94,6 +90,27 @@ namespace ProyectoParentesis
         private void clientensMorososToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+            FrmReports.FrmClienteMoroso frm = new FrmReports.FrmClienteMoroso();
+            frm.Show();
+
+        }
+
+        private void generarClientesActivosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReports.FrmClientesActivos frm = new FrmReports.FrmClientesActivos();
+            frm.Show();
+        }
+
+        private void productosMayorVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReports.FrmProductoMasVendido frm = new FrmReports.FrmProductoMasVendido();
+            frm.Show();
+        }
+
+        private void productosMayorEntradaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReports.FrmProductoEntrada frm = new FrmReports.FrmProductoEntrada();
+            frm.Show();
         }
     }
 }

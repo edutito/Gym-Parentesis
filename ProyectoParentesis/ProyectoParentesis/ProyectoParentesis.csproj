@@ -160,17 +160,35 @@
     <Compile Include="FRegistroPago\FrmMostrar.Designer.cs">
       <DependentUpon>FrmMostrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReports\FrmClienteMoroso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReports\FrmClienteMoroso.Designer.cs">
+      <DependentUpon>FrmClienteMoroso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReports\FrmClientesActivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReports\FrmClientesActivos.Designer.cs">
+      <DependentUpon>FrmClientesActivos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmReports\FrmClientesPrimerIngreso.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmReports\FrmClientesPrimerIngreso.Designer.cs">
       <DependentUpon>FrmClientesPrimerIngreso.cs</DependentUpon>
     </Compile>
-    <Compile Include="FUsuarioPermiso\FrmInsertar.cs">
+    <Compile Include="FrmReports\FrmProductoEntrada.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FUsuarioPermiso\FrmInsertar.Designer.cs">
-      <DependentUpon>FrmInsertar.cs</DependentUpon>
+    <Compile Include="FrmReports\FrmProductoEntrada.Designer.cs">
+      <DependentUpon>FrmProductoEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReports\FrmProductoMasVendido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReports\FrmProductoMasVendido.Designer.cs">
+      <DependentUpon>FrmProductoMasVendido.cs</DependentUpon>
     </Compile>
     <Compile Include="FUsuario\FrmInsertar.cs">
       <SubType>Form</SubType>
@@ -238,11 +256,20 @@
     <EmbeddedResource Include="FRegistroPago\FrmMostrar.resx">
       <DependentUpon>FrmMostrar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReports\FrmClienteMoroso.resx">
+      <DependentUpon>FrmClienteMoroso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReports\FrmClientesActivos.resx">
+      <DependentUpon>FrmClientesActivos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmReports\FrmClientesPrimerIngreso.resx">
       <DependentUpon>FrmClientesPrimerIngreso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FUsuarioPermiso\FrmInsertar.resx">
-      <DependentUpon>FrmInsertar.cs</DependentUpon>
+    <EmbeddedResource Include="FrmReports\FrmProductoEntrada.resx">
+      <DependentUpon>FrmProductoEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReports\FrmProductoMasVendido.resx">
+      <DependentUpon>FrmProductoMasVendido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FUsuario\FrmInsertar.resx">
       <DependentUpon>FrmInsertar.cs</DependentUpon>
@@ -287,6 +314,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\gym.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Models.Extensions;
-
+using System.Data.SqlClient;
 
 namespace Models.Model
 {
@@ -34,7 +34,7 @@ namespace Models.Model
             this.Fecha_Ingreso = Fecha_Ingreso;
             this.DNI = DNI;
 
-            return this; 
+            return this;
 
         }
 
@@ -45,7 +45,7 @@ namespace Models.Model
 
         public String getFullName()
         {
-            return this.Nombre + " " + this.Apellido; 
+            return this.Nombre + " " + this.Apellido;
         }
 
     }
@@ -54,7 +54,7 @@ namespace Models.Model
     {
 
         public const String Activo = "Activo";
-        public const String NoActivo = "Inactivo";        
+        public const String NoActivo = "Inactivo";
 
         public List<String> getEstados()
         {
@@ -77,7 +77,7 @@ namespace Models.Model
 
         public List<Cliente> getClientesPrimerIngreso()
         {
-            String Sql = "SELECT "+
+            String Sql = "SELECT " +
                             "C.*" +
                           " FROM CLIENTE AS C" +
                           " WHERE 1 = (SELECT  COUNT (P.id) FROM Pago AS P  WHERE P.Cliente_id = C.id )";
@@ -91,9 +91,39 @@ namespace Models.Model
                             " FROM Cliente AS C" +
                             " inner join pago as P on C.id = P.Cliente_id" +
                             "  Group by C.id, C.Nombre, C.Apellido, C.Fecha_Ingreso, C.dni,  P.Monto" +
-                            " having count(P.id) = 1" ;
+                            " having count(P.id) = 1";
 
-            return this.Conexion.getDataTable(Sql, true) ;
+            return this.Conexion.getDataTable(Sql, true);
+        }
+
+        public SqlDataReader getClientesMorosos()
+        {
+            String Sql = " SELECT C.Nombre as Nombre," +
+                           " C.Apellido as Apellido," +
+                           " C.Fecha_Ingreso AS Fecha_Ingreso_cliente," +
+                           " (DAY(P.Fecha_Inicio) - DAY(PT.Fecha_Inicio)) AS days ," +
+                           " PT.Fecha_Inicio AS fecha_inicio," +
+                           " P.Fecha_Inicio AS fecha_siguiente_pago," +
+                           " C.DNI as DNI" +
+                    " FROM Cliente AS C" +
+                    " INNER JOIN Pago AS P ON C.id = P.Cliente_id" +
+                    " INNER JOIN Pago AS PT ON (PT.id != P.id" +
+                                              " AND DAY(P.Fecha_Inicio) > DAY(PT.Fecha_Inicio)" +
+                                              " AND C.id = PT.Cliente_id)" +
+                    " WHERE C.Estado = 'Activo'";
+
+            return this.Conexion.getDataReader(Sql);
+        }
+
+        public SqlDataReader getClientesActivosDataReader()
+        {
+            String sql = " SELECT C.Nombre AS Nombre," +
+                            " C.Apellido AS Apellido," +
+                            " C.Fecha_Ingreso AS Fecha_Ingreso," +
+                            " C.DNI AS DNI" +
+                             " FROM Cliente AS C" +
+                             " WHERE C.Estado = 'Activo'";
+            return this.Conexion.getDataReader(sql);
         }
 
         public List<Cliente> getClientesActivos()
@@ -101,7 +131,7 @@ namespace Models.Model
             Cliente cliente = new Cliente()
             {
                 Estado = ClienteRepository.Activo
-            };       
+            };
             return this.getData(cliente);
         }
 

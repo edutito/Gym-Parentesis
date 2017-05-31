@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Models.Extensions;
-
+using System.Data.SqlClient;
 
 namespace Models.Model
 {
@@ -76,6 +76,43 @@ namespace Models.Model
            {
                return instance ?? (instance = new ProductoRepository());
            }
+       }
+
+       public SqlDataReader getProductosMasVendidos(){
+        String sql = "SELECT Top 30 P.Nombre, " +
+                                  "P.Precio, " +
+                                  "P.Codigo, " +
+                                  "P.Cantidad, " +
+                                  "Sum(D.cantidad) AS cantidad_vendida " +
+                    "FROM Producto AS P " +
+                    "INNER JOIN Venta_Producto_Detalle AS D ON P.id = D.producto_id " +
+                    "GROUP BY D.producto_id , " +
+                             "P.id, " +
+                             "P.Codigo, " +
+                             "P.Nombre, " +
+                             "P.Precio, " +
+                             "P.Cantidad " +
+                    "ORDER BY cantidad_vendida DESC ";
+
+          return this.Conexion.getDataReader(sql);
+       }
+
+       public SqlDataReader getProductosMasEntrada(){
+          String sql = "SELECT Top 30 P.Nombre, "+
+                                    "P.Precio, "+
+                                    "P.Codigo, "+
+                                    "P.Cantidad, "+
+                                    "Sum(D.Cantidad) AS cantidad_entrada "+
+                      "FROM Producto AS P "+
+                      "INNER JOIN Entrada_Producto AS D ON P.id = D.Producto_id "+
+                      "GROUP BY D.producto_id , "+
+                      "         P.id, "+
+                      "         P.Codigo, "+
+                      "         P.Nombre, "+
+                      "         P.Precio, "+
+                      "         P.Cantidad "+
+                      "ORDER BY cantidad_entrada DESC ";
+          return this.Conexion.getDataReader(sql);
        }
 
    }
