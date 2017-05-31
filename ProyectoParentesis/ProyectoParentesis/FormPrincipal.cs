@@ -112,5 +112,14 @@ namespace ProyectoParentesis
             FrmReports.FrmProductoEntrada frm = new FrmReports.FrmProductoEntrada();
             frm.Show();
         }
+
+        private void perrmisosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FUsuarioPermiso.FrmInsertar frm = new FUsuarioPermiso.FrmInsertar();
+            frm.Show();
+        }
+
+
+        }
     }
-}
+

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cmbProductos = new System.Windows.Forms.ComboBox();
+            this.cmbPermisos = new System.Windows.Forms.ComboBox();
+            this.cmbUsuario = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardarUsuarioPermiso = new System.Windows.Forms.Button();
@@ -37,23 +37,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cmbPermisos
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(118, 80);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(277, 21);
-            this.comboBox1.TabIndex = 60;
+            this.cmbPermisos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPermisos.FormattingEnabled = true;
+            this.cmbPermisos.Location = new System.Drawing.Point(118, 80);
+            this.cmbPermisos.Name = "cmbPermisos";
+            this.cmbPermisos.Size = new System.Drawing.Size(277, 21);
+            this.cmbPermisos.TabIndex = 60;
             // 
-            // cmbProductos
+            // cmbUsuario
             // 
-            this.cmbProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbProductos.FormattingEnabled = true;
-            this.cmbProductos.Location = new System.Drawing.Point(118, 31);
-            this.cmbProductos.Name = "cmbProductos";
-            this.cmbProductos.Size = new System.Drawing.Size(277, 21);
-            this.cmbProductos.TabIndex = 59;
+            this.cmbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUsuario.FormattingEnabled = true;
+            this.cmbUsuario.Location = new System.Drawing.Point(118, 31);
+            this.cmbUsuario.Name = "cmbUsuario";
+            this.cmbUsuario.Size = new System.Drawing.Size(277, 21);
+            this.cmbUsuario.TabIndex = 59;
             // 
             // btnCancelar
             // 
@@ -81,15 +81,16 @@
             this.btnGuardarUsuarioPermiso.TabIndex = 56;
             this.btnGuardarUsuarioPermiso.Text = "Guardar";
             this.btnGuardarUsuarioPermiso.UseVisualStyleBackColor = true;
+            this.btnGuardarUsuarioPermiso.Click += new System.EventHandler(this.btnGuardarUsuarioPermiso_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(25, 83);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 13);
+            this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 55;
-            this.label7.Text = "Permitir";
+            this.label7.Text = "Permisos";
             // 
             // label1
             // 
@@ -104,9 +105,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 207);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.cmbProductos);
+            this.ClientSize = new System.Drawing.Size(430, 189);
+            this.Controls.Add(this.cmbPermisos);
+            this.Controls.Add(this.cmbUsuario);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnGuardarUsuarioPermiso);
@@ -121,8 +122,8 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox cmbProductos;
+        private System.Windows.Forms.ComboBox cmbPermisos;
+        private System.Windows.Forms.ComboBox cmbUsuario;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnGuardarUsuarioPermiso;

@@ -219,26 +219,27 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // perrmisosToolStripMenuItem
             // 
             this.perrmisosToolStripMenuItem.Name = "perrmisosToolStripMenuItem";
-            this.perrmisosToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.perrmisosToolStripMenuItem.Text = "Perrmisos";
+            this.perrmisosToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.perrmisosToolStripMenuItem.Text = "Perrmisos y Usuarios";
+            this.perrmisosToolStripMenuItem.Click += new System.EventHandler(this.perrmisosToolStripMenuItem_Click);
             // 
             // cambioContraseñaToolStripMenuItem
             // 
             this.cambioContraseñaToolStripMenuItem.Name = "cambioContraseñaToolStripMenuItem";
-            this.cambioContraseñaToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.cambioContraseñaToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.cambioContraseñaToolStripMenuItem.Text = "Cambio Contraseña ";
             // 
             // respaldosToolStripMenuItem
             // 
             this.respaldosToolStripMenuItem.Name = "respaldosToolStripMenuItem";
-            this.respaldosToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.respaldosToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.respaldosToolStripMenuItem.Text = "Respaldos";
             // 
             // ayudaToolStripMenuItem

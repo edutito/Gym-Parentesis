@@ -125,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 309);
+            this.ClientSize = new System.Drawing.Size(639, 191);
             this.Controls.Add(this.txtMontoPagar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMesesPagos);

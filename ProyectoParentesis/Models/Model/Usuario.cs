@@ -34,6 +34,13 @@ namespace Models.Model
 
         }
 
+       
+        public override string ToString()
+        {
+            return this.Nombre + " " + Apellido;
+
+        }
+
 
     }
 
