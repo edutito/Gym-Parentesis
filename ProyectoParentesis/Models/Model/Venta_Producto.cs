@@ -24,6 +24,10 @@ namespace Models.Model
         {
             return this.Conexion.getData(this.table).DataTableToList<Venta_Producto>();
         }
+        public List<Venta_Producto> getData(Venta_Producto cliente, bool like = false)
+        {
+            return this.Conexion.getDataTable(this.getDataSearch(cliente, like), true).DataTableToList<Venta_Producto>();
+        }
 
         private static Venta_ProductoRepository instance;
         public static Venta_ProductoRepository Instance
@@ -34,5 +38,11 @@ namespace Models.Model
             }
         }
 
+        public Venta_Producto save(Venta_Producto venta_producto)
+        {
+            this.persist(venta_producto).flush();
+            venta_producto.Id = this.getMaxIdentificador() -1 ;
+            return this.getData(venta_producto).First();
+        }
     }
 }

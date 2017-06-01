@@ -38,7 +38,7 @@
             this.DGVVentaProductos = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCantidadVendidoTotal = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -55,6 +55,8 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(277, 20);
             this.txtCantidad.TabIndex = 50;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
+            this.txtCantidad.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCantidad_KeyUp);
             // 
             // cmbProductos
             // 
@@ -64,6 +66,7 @@
             this.cmbProductos.Name = "cmbProductos";
             this.cmbProductos.Size = new System.Drawing.Size(277, 21);
             this.cmbProductos.TabIndex = 49;
+            this.cmbProductos.SelectedValueChanged += new System.EventHandler(this.cmbProductos_SelectedValueChanged);
             // 
             // label7
             // 
@@ -148,13 +151,13 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // textBox1
+            // txtCantidadVendidoTotal
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 141);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(277, 20);
-            this.textBox1.TabIndex = 58;
+            this.txtCantidadVendidoTotal.Location = new System.Drawing.Point(143, 141);
+            this.txtCantidadVendidoTotal.Name = "txtCantidadVendidoTotal";
+            this.txtCantidadVendidoTotal.ReadOnly = true;
+            this.txtCantidadVendidoTotal.Size = new System.Drawing.Size(277, 20);
+            this.txtCantidadVendidoTotal.TabIndex = 58;
             // 
             // txtNombreCliente
             // 
@@ -180,6 +183,7 @@
             this.btnGuardar.TabIndex = 61;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // button3
             // 
@@ -198,11 +202,13 @@
             this.btnLimpiar.TabIndex = 64;
             this.btnLimpiar.Text = "Limpiar Datos";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // txtMontoTotalVendo
             // 
             this.txtMontoTotalVendo.Location = new System.Drawing.Point(764, 400);
             this.txtMontoTotalVendo.Name = "txtMontoTotalVendo";
+            this.txtMontoTotalVendo.ReadOnly = true;
             this.txtMontoTotalVendo.Size = new System.Drawing.Size(159, 20);
             this.txtMontoTotalVendo.TabIndex = 66;
             // 
@@ -227,7 +233,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtNombreCliente);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCantidadVendidoTotal);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.DGVVentaProductos);
@@ -258,7 +264,7 @@
         private System.Windows.Forms.DataGridView DGVVentaProductos;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCantidadVendidoTotal;
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGuardar;

@@ -41,7 +41,7 @@
             // 
             this.cmbEntradaProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEntradaProductos.FormattingEnabled = true;
-            this.cmbEntradaProductos.Location = new System.Drawing.Point(134, 69);
+            this.cmbEntradaProductos.Location = new System.Drawing.Point(133, 46);
             this.cmbEntradaProductos.Name = "cmbEntradaProductos";
             this.cmbEntradaProductos.Size = new System.Drawing.Size(272, 21);
             this.cmbEntradaProductos.TabIndex = 41;
@@ -58,7 +58,7 @@
             // 
             // btnMostrarVentaProductos
             // 
-            this.btnMostrarVentaProductos.Location = new System.Drawing.Point(482, 101);
+            this.btnMostrarVentaProductos.Location = new System.Drawing.Point(646, 109);
             this.btnMostrarVentaProductos.Name = "btnMostrarVentaProductos";
             this.btnMostrarVentaProductos.Size = new System.Drawing.Size(211, 30);
             this.btnMostrarVentaProductos.TabIndex = 39;
@@ -67,7 +67,7 @@
             // 
             // btnIngresarVentaProducto
             // 
-            this.btnIngresarVentaProducto.Location = new System.Drawing.Point(482, 38);
+            this.btnIngresarVentaProducto.Location = new System.Drawing.Point(646, 46);
             this.btnIngresarVentaProducto.Name = "btnIngresarVentaProducto";
             this.btnIngresarVentaProducto.Size = new System.Drawing.Size(211, 34);
             this.btnIngresarVentaProducto.TabIndex = 38;
@@ -82,7 +82,7 @@
             this.DGMostrarEntradaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGMostrarEntradaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGMostrarEntradaProductos.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.DGMostrarEntradaProductos.Location = new System.Drawing.Point(0, 155);
+            this.DGMostrarEntradaProductos.Location = new System.Drawing.Point(0, 196);
             this.DGMostrarEntradaProductos.Name = "DGMostrarEntradaProductos";
             this.DGMostrarEntradaProductos.ReadOnly = true;
             this.DGMostrarEntradaProductos.Size = new System.Drawing.Size(869, 229);
@@ -91,7 +91,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 72);
+            this.label7.Location = new System.Drawing.Point(11, 49);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 13);
             this.label7.TabIndex = 42;
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 384);
+            this.ClientSize = new System.Drawing.Size(869, 425);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cmbEntradaProductos);
             this.Controls.Add(this.label1);

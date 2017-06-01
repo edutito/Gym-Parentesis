@@ -131,7 +131,7 @@ namespace Models
 
         public int getMaxIdentificador()
         {
-            String cmd = "SELECT ISNULL(COUNT(Id), 0) + 1 as 'max' FROM "+ this.table;
+            String cmd = "SELECT ISNULL(COUNT(Id), 1) + 1 as 'max' FROM "+ this.table;
             return this.Conexion.getNumber(cmd, "max");
         }
 
@@ -159,7 +159,7 @@ namespace Models
 
         private Repository addCmd(String cmd)
         {
-            this.cmd += " " + cmd;
+            this.cmd += " ; " + cmd;
             return this;
         }
 
