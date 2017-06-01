@@ -126,6 +126,41 @@ namespace ProyectoParentesis.Validaciones
 
         }
 
+        public bool ContrasennaActual(String Contrasenna)
+        {
+
+            Usuario convrscon = Contenedor.Contenedor.getUsuario();
+
+
+            if (Contrasenna != convrscon.Contrasena )
+            {
+                MessageBox.Show("Contraseña Actual no coincide");
+
+                return false;
+
+            }
+            return true;
+
+        }
+
+
+
+        public bool ContrasennaNueva(String NuevaContrasenna, String ConfirmacionContrasenna)
+        {
+
+            if (NuevaContrasenna != ConfirmacionContrasenna)
+            {
+                MessageBox.Show("Contraseña Nueva No coincide con la de Confirmacion");
+
+                return false;
+
+            }
+            return true;
+
+        }
+
+
+
 
     }
 }

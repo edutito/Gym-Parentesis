@@ -106,15 +106,17 @@ namespace ProyectoParentesis.FRegistroPago
 
         public void buscar()
         {
-            Pago pago = new Pago();
+            Pago pag = new Pago();
 
             if ( this.cmbCliente.SelectedItem != null) {
-                pago.Cliente_id = ((Cliente)this.cmbCliente.SelectedItem).Id;
+                pag.Cliente_id = ((Cliente)this.cmbCliente.SelectedItem).Id;
+
             }
-            
-            this.LlenarData(PagoRepository.Instance.getData(pago, false));
+
+            this.LlenarData(PagoRepository.Instance.getData(pag, false));
         }
 
+         
         private void populate()
         {
             this.cmbCliente.Items.Clear();

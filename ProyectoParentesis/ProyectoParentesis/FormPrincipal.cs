@@ -119,6 +119,12 @@ namespace ProyectoParentesis
             frm.Show();
         }
 
+        private void cambioContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FCambioContrasena.frmCambioContraseña frm = new FCambioContrasena.frmCambioContraseña();
+            frm.Show();
+        }
+
 
         }
     }

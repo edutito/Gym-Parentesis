@@ -50,9 +50,9 @@ namespace Models.Model
       
 
 
-        public List<Cliente> getData(Usuario_Permisos usuario, bool like = false)
+        public List<Usuario_Permisos> getData(Usuario_Permisos usuario, bool like = false)
         {
-            return this.Conexion.getDataTable(this.getDataSearch(usuario, like), true).DataTableToList<Cliente>();
+            return this.Conexion.getDataTable(this.getDataSearch(usuario, like), true).DataTableToList<Usuario_Permisos>();
         }
 
 

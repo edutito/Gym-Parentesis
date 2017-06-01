@@ -70,7 +70,21 @@ namespace ProyectoParentesis.FUsuarioPermiso
 
         }
 
+        public void buscar()
+        {
+            Usuario_Permisos usu = new Usuario_Permisos();
 
+            if (this.cmbBuscarPermiso.SelectedItem != null)
+            {
+                usu.Permiso_id = ((Permisos)this.cmbBuscarPermiso.SelectedItem).Id;
+            }
+            if (this.cmbBuscarUsuario.SelectedItem != null)
+            {
+                usu.Usuario_id = ((Usuario)this.cmbBuscarUsuario.SelectedItem).Id;
+
+            }
+            this.LlenarData(Usuario_PermisosRepository.Instance.getData(usu, false));
+        }
 
         private void populate()
         {
@@ -95,6 +109,11 @@ namespace ProyectoParentesis.FUsuarioPermiso
         {
             FrmInsertar frm = new FrmInsertar();
             frm.Show();
+        }
+
+        private void btnMostrarUsuarios_Click(object sender, EventArgs e)
+        {
+            this.buscar();
         }
     }
 }

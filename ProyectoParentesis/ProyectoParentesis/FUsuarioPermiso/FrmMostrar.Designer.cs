@@ -75,6 +75,7 @@
             this.btnMostrarUsuarios.TabIndex = 39;
             this.btnMostrarUsuarios.Text = "Mostrar Usuarios y Permisos";
             this.btnMostrarUsuarios.UseVisualStyleBackColor = true;
+            this.btnMostrarUsuarios.Click += new System.EventHandler(this.btnMostrarUsuarios_Click);
             // 
             // btnIngresarUsuarioYPermiso
             // 
