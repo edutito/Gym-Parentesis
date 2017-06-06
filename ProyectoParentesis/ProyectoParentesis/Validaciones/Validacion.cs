@@ -71,6 +71,21 @@ namespace ProyectoParentesis.Validaciones
 
         }
 
+        public bool ValidarFechaIngresoMenorActual(DateTime date, String error)
+        {
+
+            if (date < DateTime.Now)
+            {
+                MessageBox.Show(error);
+
+                return false;
+
+            }
+            return true;
+
+        }
+
+
         public bool ClienteSinRepetir(String DNI, String error)
         {
 
@@ -159,8 +174,32 @@ namespace ProyectoParentesis.Validaciones
 
         }
 
+        public bool UsuarioNoNulo(String usuario)
+        {
+
+            if (usuario == "")
+            {
+                MessageBox.Show("Campo Usuario es requeridos");
+                return true;
+              
+            }
+            return false;
+        
+        }
 
 
+        public bool ContraseNoNulo(String contrase)
+        {
+
+            if (contrase == "")
+            {
+                MessageBox.Show("Campo Contraseña es requeridos");
+                return true;
+
+            }
+            return false;
+
+        }
 
     }
 }

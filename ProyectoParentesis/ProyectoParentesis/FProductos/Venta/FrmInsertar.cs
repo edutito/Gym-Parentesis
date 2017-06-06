@@ -168,6 +168,7 @@ namespace ProyectoParentesis.FProductos.Venta
         {
             this.populate();
             this.txtNombreCliente.Text = "";
+            this.DGVVentaProductos.Rows.Clear();
         }
 
 
@@ -180,7 +181,14 @@ namespace ProyectoParentesis.FProductos.Venta
             venta_producto.Nombre_persona = this.txtNombreCliente.Text;
             venta_producto = Venta_ProductoRepository.Instance.save(venta_producto);
             this.saveChildrens(venta_producto);
-            this.limpiar();
+
+            if (this.DGVVentaProductos != null)
+            {
+
+                MessageBox.Show("Informacion Guardada");
+                this.limpiardatos();
+            }
+            
         }
 
         private void saveChildrens(Venta_Producto venta_producto)
@@ -216,7 +224,7 @@ namespace ProyectoParentesis.FProductos.Venta
 
             if (this.DGVVentaProductos.Rows.Count == 0)
             {
-                MessageBox.Show("Se debe por lo menos tener 1 detalle.");
+                MessageBox.Show("Se requiere por lo menos tener 1 producto agregado.");
                 return false;
             }
 

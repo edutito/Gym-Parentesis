@@ -220,6 +220,12 @@
     <Compile Include="FUsuario\FrmMostrar.Designer.cs">
       <DependentUpon>FrmMostrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FVersion\FrmVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FVersion\FrmVersion.Designer.cs">
+      <DependentUpon>FrmVersion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validaciones\Validacion.cs" />
@@ -303,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FUsuario\FrmMostrar.resx">
       <DependentUpon>FrmMostrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FVersion\FrmVersion.resx">
+      <DependentUpon>FrmVersion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

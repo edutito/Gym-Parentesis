@@ -30,9 +30,21 @@ namespace ProyectoParentesis.FLogin
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+           
+           
 
             String Nombre_Usuario = this.txtUsuario.Text;
             String Contrasena = this.txtContrasena.Text;
+
+            if (Contenedor.Contenedor.getValidacion().UsuarioNoNulo(this.txtUsuario.Text))
+            {
+                return;
+            }
+
+            if (Contenedor.Contenedor.getValidacion().ContraseNoNulo(this.txtContrasena.Text))
+            {
+                return;
+            }
 
              Usuario usuario = new Usuario();
 
@@ -41,6 +53,8 @@ namespace ProyectoParentesis.FLogin
              usuario.Estado = UsuarioRepository.Activo;
 
              List<Usuario> usuarios = UsuarioRepository.Instance.getData(usuario, false);
+
+
 
              if (usuarios.Count() > 0)
              {
@@ -56,10 +70,11 @@ namespace ProyectoParentesis.FLogin
 
                  this.txtContrasena.Clear();
                  this.txtUsuario.Clear();
-
-                 
-
+                
              }
+           
+
+            
 
 
 

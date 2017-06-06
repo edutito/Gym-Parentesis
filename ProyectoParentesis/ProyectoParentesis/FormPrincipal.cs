@@ -125,6 +125,12 @@ namespace ProyectoParentesis
             frm.Show();
         }
 
+        private void versionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FVersion.FrmVersion frm = new FVersion.FrmVersion();
+            frm.Show();
+        }
+
 
         }
     }

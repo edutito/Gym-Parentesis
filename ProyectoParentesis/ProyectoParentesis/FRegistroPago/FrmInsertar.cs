@@ -84,6 +84,9 @@ namespace ProyectoParentesis.FRegistroPago
                 Contenedor.Contenedor.getUsuario(),
                 PagoRepository.MONTO
                 );
+            PagoRepository.Instance.persist(pago)
+               .flush();
+
            
             if (this.pago != null)
             {

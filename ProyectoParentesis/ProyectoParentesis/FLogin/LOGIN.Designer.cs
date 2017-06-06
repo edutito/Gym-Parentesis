@@ -72,12 +72,13 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnLogin.Location = new System.Drawing.Point(137, 147);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(92, 33);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Log in";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // LOGIN

@@ -172,6 +172,10 @@ namespace ProyectoParentesis.FCliente
             {
                 return false;
             }
+            if (!Contenedor.Contenedor.getValidacion().ValidarFechaIngresoMenorActual(this.dateTimefechaIngreso.Value, "Fecha no ser puede menor a la Actual "))
+            {
+                return false;
+            }
 
 
             if (cliente == null && !Contenedor.Contenedor.getValidacion().ClienteSinRepetir(this.txtIdentificacion.Text, "Cliente ya Existe"))
