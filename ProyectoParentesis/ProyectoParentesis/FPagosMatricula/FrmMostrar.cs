@@ -30,8 +30,8 @@ namespace ProyectoParentesis.FPagosMatricula
         {
 
             
-            this.DGMostrarClientes.Columns.Add("Nombre_Cliente", "Nombre del Cliente");
-            this.DGMostrarClientes.Columns.Add("Apellido", "Apellido");
+            this.DGMostrarClientes.Columns.Add("Nombre_Cliente_Pago", "Nombre del Cliente Quien Pago");
+            this.DGMostrarClientes.Columns.Add("Nombre_Cliente", "Nombre Cliente");
             this.DGMostrarClientes.Columns.Add("Monto", "Monto");
             this.DGMostrarClientes.Columns.Add("Id", "Id");
 
@@ -51,12 +51,9 @@ namespace ProyectoParentesis.FPagosMatricula
                 DataGridViewRow row = new DataGridViewRow();
 
                 this.DGMostrarClientes.Rows.Add(
-
-                   pago_matricula.Nombre_Cliente,
-
-                    pago_matricula.Apellido,
+                   pago_matricula.Nombre_Cliente + " " + pago_matricula.Apellido,                  
+                    pago_matricula.getCliente().getFullName(),
                     pago_matricula.Monto,
-
                     pago_matricula.Id
                     );
             }

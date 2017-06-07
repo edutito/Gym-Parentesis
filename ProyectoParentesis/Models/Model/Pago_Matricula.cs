@@ -37,6 +37,10 @@ namespace Models.Model
 
         }
 
+        public Cliente getCliente() {
+            return ClienteRepository.Instance.getData(new Cliente() {Id = (int)this.Cliente_id }).First();
+        }
+
 
     }
 
