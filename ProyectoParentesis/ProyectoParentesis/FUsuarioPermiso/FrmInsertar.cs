@@ -14,10 +14,15 @@ namespace ProyectoParentesis.FUsuarioPermiso
 {
     public partial class FrmInsertar : Form
     {
-        public FrmInsertar()
+        private FrmMostrar frmMostrar;
+
+        public FrmInsertar(FrmMostrar frmMostrar)  
         {
             InitializeComponent();
             //this.ColocarColumnas();
+            this.frmMostrar = frmMostrar;
+
+
             this.populate();
         }
 
@@ -47,13 +52,14 @@ namespace ProyectoParentesis.FUsuarioPermiso
 
 
             usuper.Usuario_id = ((Usuario)this.cmbUsuario.SelectedItem).Id;
-               
+            Usuario_PermisosRepository.Instance.delete(usuper);
             usuper.Permiso_id = ((Permisos)this.cmbPermisos.SelectedItem).Id;
                
             
             Usuario_PermisosRepository.Instance.persist(usuper).flush();
             MessageBox.Show("Informacion Guardada");
             this.limpiardatos();
+            this.frmMostrar.buscar();
         }
 
         private void limpiardatos()
@@ -77,10 +83,10 @@ namespace ProyectoParentesis.FUsuarioPermiso
                 return false;
             }
 
-            if (!Contenedor.Contenedor.getValidacion().solounpermisoporusuario(((Usuario)this.cmbUsuario.SelectedItem).Id, ((Permisos)this.cmbPermisos.SelectedItem).Id))
-            {
-                return false;
-            }
+            //if (!Contenedor.Contenedor.getValidacion().solounpermisoporusuario(((Usuario)this.cmbUsuario.SelectedItem).Id, ((Permisos)this.cmbPermisos.SelectedItem).Id))
+            //{
+            //    return false;
+            //}
 
             return true;
         }

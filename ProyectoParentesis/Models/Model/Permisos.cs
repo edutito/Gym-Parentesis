@@ -24,6 +24,9 @@ namespace Models.Model
 
     public class PermisosRepository : Repository {
 
+        public const int Administrador = 1;
+        public const int Caja = 2 ;
+
         public List<Permisos> getData()
         {
             return this.Conexion.getData(this.table).DataTableToList<Permisos>();
@@ -42,9 +45,6 @@ namespace Models.Model
                 return instance ?? (instance = new PermisosRepository());
             }
         }
-
-
-      
     }
 }
 

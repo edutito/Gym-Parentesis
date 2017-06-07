@@ -131,6 +131,12 @@ namespace ProyectoParentesis
             frm.Show();
         }
 
+        private void respaldosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FRespaldos.FrmRespaldo frm = new FRespaldos.FrmRespaldo();
+            frm.Show();
+        }
+
 
         }
     }

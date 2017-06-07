@@ -12,7 +12,7 @@ namespace Models
         private readonly ConexionDB conexion;
         public String table;
         private String cmd;
-        protected String orderBy;
+        public String orderBy;
         //private static String dateFormat = "yyyy-MM-dd HH:mm:ss.fff";
         private static String dateFormat = "s";
         private static String dateNull = "0001-01-01T00:00:00"; // 0001-01-01 00:00:00.000

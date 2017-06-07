@@ -24,8 +24,16 @@ namespace Models.Model
         public Permisos getPermiso()
         {
             if (this.Permiso_id != null)
-                return PermisosRepository.Instance.getData(new Permisos() { Id = ((int)this.Permiso_id) }).First();
+            {
+                Permisos p = new Permisos() { Id = (int)this.Permiso_id };
+                return PermisosRepository.Instance.getData(p).First();
+            }
             else return null;
+        }
+
+        public Usuario_Permisos ():base() {
+            this.Usuario_id = null;
+            this.Permiso_id = null;
         }
 
     }
@@ -55,6 +63,12 @@ namespace Models.Model
             return this.Conexion.getDataTable(this.getDataSearch(usuario, like), true).DataTableToList<Usuario_Permisos>();
         }
 
+
+        public void delete(Usuario_Permisos per)
+        {
+            String cmd = "DELETE " + this.table + " WHERE Usuario_id =" + per.Usuario_id;
+            this.Conexion.EjecutarComando(cmd);
+        }
 
 
     }

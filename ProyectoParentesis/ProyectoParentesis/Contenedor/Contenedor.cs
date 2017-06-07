@@ -15,6 +15,7 @@ namespace ProyectoParentesis.Contenedor
          private static Usuario usuario { get; set; }
 
 
+         private static List<Usuario_Permisos> permitir { get; set; }
 
          static Contenedor( )
         {
@@ -37,7 +38,20 @@ namespace ProyectoParentesis.Contenedor
         public static void setUsuario(Usuario u)
         {
             usuario = u;
+            setPermitir(u.getUsuariosPermisos());
 
         }
+        public static List<Usuario_Permisos> getPermitir()
+        {
+            
+            return permitir ;
+
+        }
+        public static void setPermitir(List<Usuario_Permisos> per)
+        {
+            permitir = per;
+
+        }
+
     }
 }

@@ -107,7 +107,7 @@ namespace ProyectoParentesis.FUsuarioPermiso
 
         private void btnIngresarUsuarioYPermiso_Click(object sender, EventArgs e)
         {
-            FrmInsertar frm = new FrmInsertar();
+            FrmInsertar frm = new FrmInsertar(this);
             frm.Show();
         }
 
