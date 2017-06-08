@@ -28,8 +28,9 @@ namespace ProyectoParentesis.FRegistroPago
 
             this.DGMostrarClientes.Columns.Add("cliente", "Cliente");
             this.DGMostrarClientes.Columns.Add("monto", "Monto");
+            this.DGMostrarClientes.Columns.Add("monto_matricula", "Monto Matricula");
             this.DGMostrarClientes.Columns.Add("Fecha_Inicio", "Fecha Inicio");
-            this.DGMostrarClientes.Columns.Add("Fecha_Final", "Fecha Final");            
+            this.DGMostrarClientes.Columns.Add("Fecha_Final", "Fecha Final");           
             this.DGMostrarClientes.Columns.Add("Id", "Id");
 
             this.DGMostrarClientes.Columns["Id"].Visible = false;
@@ -45,10 +46,11 @@ namespace ProyectoParentesis.FRegistroPago
             foreach (Pago pago in pagos)
             {
                 DataGridViewRow row = new DataGridViewRow();
-
+                Pago_Matricula matricula = pago.getPagoMatricula();
                 this.DGMostrarClientes.Rows.Add(
                     pago.getCliente().getFullName(),
                     pago.Monto,
+                    matricula != null ? matricula.Monto.ToString() :"No ha pagado Matriucla",
                     pago.Fecha_Inicio,
                     pago.Fecha_Final,
                     pago.Id

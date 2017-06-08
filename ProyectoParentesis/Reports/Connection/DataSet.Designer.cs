@@ -1476,7 +1476,7 @@ namespace Reports.Connection {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ProductoVendidoRow AddProductoVendidoRow(string Nombre, string Precio, string Codigo, string Cantidad, string cantidad_vendida) {
+            public ProductoVendidoRow AddProductoVendidoRow(string Nombre, int Precio, string Codigo, int Cantidad, int cantidad_vendida) {
                 ProductoVendidoRow rowProductoVendidoRow = ((ProductoVendidoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nombre,
@@ -1518,13 +1518,13 @@ namespace Reports.Connection {
             private void InitClass() {
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
-                this.columnPrecio = new global::System.Data.DataColumn("Precio", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnPrecio = new global::System.Data.DataColumn("Precio", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrecio);
                 this.columnCodigo = new global::System.Data.DataColumn("Codigo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCodigo);
-                this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCantidad);
-                this.columncantidad_vendida = new global::System.Data.DataColumn("cantidad_vendida", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncantidad_vendida = new global::System.Data.DataColumn("cantidad_vendida", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncantidad_vendida);
             }
             
@@ -1779,7 +1779,7 @@ namespace Reports.Connection {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ProductoEntradaRow AddProductoEntradaRow(string Nombre, string Precio, string Codigo, string Cantidad, string cantidad_entrada) {
+            public ProductoEntradaRow AddProductoEntradaRow(string Nombre, int Precio, string Codigo, int Cantidad, int cantidad_entrada) {
                 ProductoEntradaRow rowProductoEntradaRow = ((ProductoEntradaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nombre,
@@ -1821,13 +1821,13 @@ namespace Reports.Connection {
             private void InitClass() {
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
-                this.columnPrecio = new global::System.Data.DataColumn("Precio", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnPrecio = new global::System.Data.DataColumn("Precio", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrecio);
                 this.columnCodigo = new global::System.Data.DataColumn("Codigo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCodigo);
-                this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCantidad);
-                this.columncantidad_entrada = new global::System.Data.DataColumn("cantidad_entrada", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncantidad_entrada = new global::System.Data.DataColumn("cantidad_entrada", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncantidad_entrada);
                 this.columncantidad_entrada.Caption = "cantidad_vendida";
             }
@@ -2509,10 +2509,10 @@ namespace Reports.Connection {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Precio {
+            public int Precio {
                 get {
                     try {
-                        return ((string)(this[this.tableProductoVendido.PrecioColumn]));
+                        return ((int)(this[this.tableProductoVendido.PrecioColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Precio\' in table \'ProductoVendido\' is DBNull.", e);
@@ -2541,10 +2541,10 @@ namespace Reports.Connection {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Cantidad {
+            public int Cantidad {
                 get {
                     try {
-                        return ((string)(this[this.tableProductoVendido.CantidadColumn]));
+                        return ((int)(this[this.tableProductoVendido.CantidadColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Cantidad\' in table \'ProductoVendido\' is DBNull.", e);
@@ -2557,10 +2557,10 @@ namespace Reports.Connection {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cantidad_vendida {
+            public int cantidad_vendida {
                 get {
                     try {
-                        return ((string)(this[this.tableProductoVendido.cantidad_vendidaColumn]));
+                        return ((int)(this[this.tableProductoVendido.cantidad_vendidaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cantidad_vendida\' in table \'ProductoVendido\' is DBNull.", e);
@@ -2664,10 +2664,10 @@ namespace Reports.Connection {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Precio {
+            public int Precio {
                 get {
                     try {
-                        return ((string)(this[this.tableProductoEntrada.PrecioColumn]));
+                        return ((int)(this[this.tableProductoEntrada.PrecioColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Precio\' in table \'ProductoEntrada\' is DBNull.", e);
@@ -2696,10 +2696,10 @@ namespace Reports.Connection {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Cantidad {
+            public int Cantidad {
                 get {
                     try {
-                        return ((string)(this[this.tableProductoEntrada.CantidadColumn]));
+                        return ((int)(this[this.tableProductoEntrada.CantidadColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Cantidad\' in table \'ProductoEntrada\' is DBNull.", e);
@@ -2712,10 +2712,10 @@ namespace Reports.Connection {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cantidad_entrada {
+            public int cantidad_entrada {
                 get {
                     try {
-                        return ((string)(this[this.tableProductoEntrada.cantidad_entradaColumn]));
+                        return ((int)(this[this.tableProductoEntrada.cantidad_entradaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cantidad_entrada\' in table \'ProductoEntrada\' is DBNull.", e);

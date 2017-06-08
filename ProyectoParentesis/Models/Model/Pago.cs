@@ -47,6 +47,13 @@ namespace Models.Model
 
             return this;
         }
+
+        public Pago_Matricula getPagoMatricula()
+        {
+            List<Pago_Matricula> pagos = Pago_MatriculaRepository.Instance.getData(new Pago_Matricula() { Cliente_id = this.Id });
+            if (pagos.Count == 0) return null;       
+            return pagos.First();
+        }
     }
 
     public class PagoRepository : Repository {
