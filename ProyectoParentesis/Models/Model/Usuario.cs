@@ -48,8 +48,6 @@ namespace Models.Model
                 Usuario_id = this.Id
             });
         }
-
-        
     }
 
     public class UsuarioRepository : Repository

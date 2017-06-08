@@ -140,7 +140,8 @@ namespace ProyectoParentesis
 
         private void ajustesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FAjustes.FrmInsertar frm = new FAjustes.FrmInsertar();
+            frm.Show();
         }
 
         private void Permisos()

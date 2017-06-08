@@ -31,10 +31,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMotivo = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.cmbProductos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,7 +41,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(433, 191);
+            this.btnCancelar.Location = new System.Drawing.Point(435, 126);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(97, 34);
             this.btnCancelar.TabIndex = 45;
@@ -52,7 +50,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(433, 138);
+            this.btnLimpiar.Location = new System.Drawing.Point(435, 73);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(97, 34);
             this.btnLimpiar.TabIndex = 44;
@@ -61,45 +59,30 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(433, 88);
+            this.btnGuardar.Location = new System.Drawing.Point(435, 23);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(97, 31);
             this.btnGuardar.TabIndex = 43;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(117, 112);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(271, 20);
-            this.txtPrecio.TabIndex = 42;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 115);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 13);
-            this.label7.TabIndex = 40;
-            this.label7.Text = "Tipo de Ajuste ";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 159);
+            this.label5.Location = new System.Drawing.Point(22, 114);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 46;
             this.label5.Text = "Motivo";
             // 
-            // textBox1
+            // txtMotivo
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 159);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(271, 143);
-            this.textBox1.TabIndex = 47;
+            this.txtMotivo.Location = new System.Drawing.Point(117, 111);
+            this.txtMotivo.Multiline = true;
+            this.txtMotivo.Name = "txtMotivo";
+            this.txtMotivo.Size = new System.Drawing.Size(277, 143);
+            this.txtMotivo.TabIndex = 47;
             // 
             // txtCantidad
             // 
@@ -139,18 +122,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 350);
+            this.ClientSize = new System.Drawing.Size(565, 268);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.cmbProductos);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMotivo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.label7);
             this.Name = "FrmInsertar";
             this.Text = "FrmInsertar";
             this.ResumeLayout(false);
@@ -163,10 +144,8 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMotivo;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.ComboBox cmbProductos;
         private System.Windows.Forms.Label label1;

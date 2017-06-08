@@ -43,6 +43,7 @@
     <Compile Include="Conexion\BaseCon.cs" />
     <Compile Include="Conexion\ConexionDB.cs" />
     <Compile Include="Extensions\DataTableExtension.cs" />
+    <Compile Include="Model\Ajustes.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Entrada_Producto.cs" />
     <Compile Include="Model\Instructor.cs" />
