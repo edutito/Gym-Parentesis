@@ -49,7 +49,7 @@ namespace Models.Model
             });
         }
 
-
+        
     }
 
     public class UsuarioRepository : Repository

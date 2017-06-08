@@ -157,6 +157,7 @@
             this.ajustesToolStripMenuItem.Name = "ajustesToolStripMenuItem";
             this.ajustesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ajustesToolStripMenuItem.Text = "Ajustes";
+            this.ajustesToolStripMenuItem.Click += new System.EventHandler(this.ajustesToolStripMenuItem_Click);
             // 
             // listadosToolStripMenuItem
             // 

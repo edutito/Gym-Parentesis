@@ -53,5 +53,18 @@ namespace ProyectoParentesis.Contenedor
 
         }
 
+        public static bool TenerPermisos(int id)
+        {
+
+            foreach (Usuario_Permisos gana in permitir) {
+
+                if (id == (int)gana.Permiso_id)
+
+                    return true;
+            }
+
+            return false ; 
+        }
+
     }
 }

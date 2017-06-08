@@ -18,6 +18,7 @@ namespace ProyectoParentesis
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            this.Permisos();
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -137,6 +138,20 @@ namespace ProyectoParentesis
             frm.Show();
         }
 
+        private void ajustesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Permisos()
+        {
+            if (!Contenedor.Contenedor.TenerPermisos(Models.Model.PermisosRepository.Administrador))
+            {
+                this.ajustesToolStripMenuItem.Visible = false;
+                this.listadosToolStripMenuItem.Visible = false;
+                this.seguridadToolStripMenuItem.Visible = false;
+            }
+        }
 
         }
     }

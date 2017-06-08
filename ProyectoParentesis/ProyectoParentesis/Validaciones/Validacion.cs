@@ -60,7 +60,7 @@ namespace ProyectoParentesis.Validaciones
         public bool ValidarFechaIngreso(DateTime date, String error)
         {
 
-            if (date > DateTime.Now)
+            if (date.Date > DateTime.Now.Date)
             {
                 MessageBox.Show(error);
 
@@ -74,7 +74,7 @@ namespace ProyectoParentesis.Validaciones
         public bool ValidarFechaIngresoMenorActual(DateTime date, String error)
         {
 
-            if (date < DateTime.Now)
+            if (date.Date < DateTime.Now.Date)
             {
                 MessageBox.Show(error);
 

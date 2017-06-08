@@ -64,11 +64,11 @@
     <Compile Include="FAjustes\FrmInsertar.Designer.cs">
       <DependentUpon>FrmInsertar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FCambioContrasena\frmCambioContraseña.cs">
+    <Compile Include="FCambioContrasena\frmCambioContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FCambioContrasena\frmCambioContraseña.Designer.cs">
-      <DependentUpon>frmCambioContraseña.cs</DependentUpon>
+    <Compile Include="FCambioContrasena\frmCambioContraseña.Designer.cs">
+      <DependentUpon>frmCambioContraseña.cs</DependentUpon>
     </Compile>
     <Compile Include="FCliente\FrmInsertar.cs">
       <SubType>Form</SubType>
@@ -244,8 +244,8 @@
     <EmbeddedResource Include="FAjustes\FrmInsertar.resx">
       <DependentUpon>FrmInsertar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FCambioContrasena\frmCambioContraseña.resx">
-      <DependentUpon>frmCambioContraseña.cs</DependentUpon>
+    <EmbeddedResource Include="FCambioContrasena\frmCambioContraseña.resx">
+      <DependentUpon>frmCambioContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCliente\FrmInsertar.resx">
       <DependentUpon>FrmInsertar.cs</DependentUpon>
