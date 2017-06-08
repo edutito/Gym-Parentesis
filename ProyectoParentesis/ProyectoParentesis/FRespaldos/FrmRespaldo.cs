@@ -25,7 +25,7 @@ namespace ProyectoParentesis.FRespaldos
             string s = null;
             s = this.saveFileDialog1.FileName;
             UsuarioRepository.Instance.Conexion.EjecutarComando("Backup database BD_Parentess to disk='" + s + ".bak'");
-            MessageBox.Show("Se guardo tere");
+            MessageBox.Show("Ya se guardo la base de datos");
         }
     }
 }
