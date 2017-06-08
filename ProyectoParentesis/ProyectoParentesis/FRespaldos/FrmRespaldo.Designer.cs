@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRespaldo));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGenerarRespaldo = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             this.btnGenerarRespaldo.TabIndex = 1;
             this.btnGenerarRespaldo.Text = "Generar Respaldo de Base de Datos ";
             this.btnGenerarRespaldo.UseVisualStyleBackColor = true;
+            this.btnGenerarRespaldo.Click += new System.EventHandler(this.btnGenerarRespaldo_Click);
             // 
             // FrmRespaldo
             // 
@@ -70,5 +72,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnGenerarRespaldo;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

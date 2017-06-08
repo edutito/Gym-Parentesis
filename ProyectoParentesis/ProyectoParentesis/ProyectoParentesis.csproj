@@ -368,6 +368,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\gym.png" />
+    <Content Include="Images\gymwhite.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />

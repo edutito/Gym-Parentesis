@@ -31,6 +31,7 @@ namespace ProyectoParentesis.FrmReports
             ds.AcceptChanges();
 
             rpt.SetDataSource(ds);
+            
             this.crystalReportViewer1.ReportSource = rpt;
             this.crystalReportViewer1.RefreshReport();
 
