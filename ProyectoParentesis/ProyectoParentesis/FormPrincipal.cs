@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoParentesis.FCliente;
+using System.Diagnostics;
 
 
 namespace ProyectoParentesis
@@ -152,6 +153,11 @@ namespace ProyectoParentesis
                 this.listadosToolStripMenuItem.Visible = false;
                 this.seguridadToolStripMenuItem.Visible = false;
             }
+        }
+
+        private void manualDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
         }
 
         }
